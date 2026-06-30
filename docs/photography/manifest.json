@@ -1,0 +1,218 @@
+[
+  {
+    "label": "IMG_9259",
+    "name": "Sea Foam Shoreline",
+    "slug": "sea-foam-shoreline",
+    "collection": "Sea Glass Mirrors",
+    "file": "public/products/IMG_9259.jpg",
+    "price": 245
+  },
+  {
+    "label": "IMG_8955",
+    "name": "Tidewater Ombre",
+    "slug": "tidewater-ombre",
+    "collection": "Sea Glass Mirrors",
+    "file": "public/products/IMG_8955.jpg",
+    "price": 285
+  },
+  {
+    "label": "IMG_9205",
+    "name": "Tidewater Reflection",
+    "slug": "tidewater-reflection",
+    "collection": "Sea Glass Mirrors",
+    "file": "public/products/IMG_9205.jpg",
+    "price": 285
+  },
+  {
+    "label": "IMG_9260",
+    "name": "Tidewater Starfish",
+    "slug": "tidewater-starfish",
+    "collection": "Sea Glass Mirrors",
+    "file": "public/products/IMG_9260.jpg",
+    "price": 285
+  },
+  {
+    "label": "IMG_9204",
+    "name": "Turquoise Tide Mirror",
+    "slug": "turquoise-tide-mirror",
+    "collection": "Sea Glass Mirrors",
+    "file": "public/products/IMG_9204.jpg",
+    "price": 245
+  },
+  {
+    "label": "IMG_8897",
+    "name": "Aqua Seahorse",
+    "slug": "aqua-seahorse",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8897.jpg",
+    "price": 145
+  },
+  {
+    "label": "IMG_8895",
+    "name": "Beach Please Mermaid",
+    "slug": "beach-please-mermaid",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8895.jpg",
+    "price": 158
+  },
+  {
+    "label": "IMG_8901",
+    "name": "Cocktail Hour",
+    "slug": "cocktail-hour",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8901.jpg",
+    "price": 128
+  },
+  {
+    "label": "IMG_8915",
+    "name": "Garnet Octopus",
+    "slug": "garnet-octopus",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8915.jpg",
+    "price": 175
+  },
+  {
+    "label": "IMG_8887",
+    "name": "Gilded Tide",
+    "slug": "gilded-tide",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8887.jpg",
+    "price": 145
+  },
+  {
+    "label": "IMG_8911",
+    "name": "Gulf Coast Palm",
+    "slug": "gulf-coast-palm",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8911.jpg",
+    "price": 145
+  },
+  {
+    "label": "IMG_8918",
+    "name": "Little Tides",
+    "slug": "little-tides",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8918.jpg",
+    "price": 128
+  },
+  {
+    "label": "IMG_8898",
+    "name": "Loggerhead Tide",
+    "slug": "loggerhead-tide",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8898.jpg",
+    "price": 165
+  },
+  {
+    "label": "IMG_8932",
+    "name": "Rose Quartz Tideline",
+    "slug": "rose-quartz-tideline",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8932.jpg",
+    "price": 128
+  },
+  {
+    "label": "IMG_8896",
+    "name": "Ros\u00e9 Flamingos",
+    "slug": "rose-flamingos",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8896.jpg",
+    "price": 155
+  },
+  {
+    "label": "IMG_8920",
+    "name": "Salt Air Laundry Day",
+    "slug": "salt-air-laundry-day",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8920.jpg",
+    "price": 118
+  },
+  {
+    "label": "IMG_8893",
+    "name": "Seafoam Loggerhead",
+    "slug": "seafoam-loggerhead",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8893.jpg",
+    "price": 135
+  },
+  {
+    "label": "IMG_8902",
+    "name": "Sunday Swimsuit Line",
+    "slug": "sunday-swimsuit-line",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8902.jpg",
+    "price": 145
+  },
+  {
+    "label": "IMG_8931",
+    "name": "Tide Line Garland",
+    "slug": "tide-line-garland",
+    "collection": "Coastal Shadow Boxes",
+    "file": "public/products/IMG_8931.jpg",
+    "price": 135
+  },
+  {
+    "label": "IMG_9332",
+    "name": "Always Stay Salty",
+    "slug": "always-stay-salty",
+    "collection": "Coastal Sayings",
+    "file": "public/products/IMG_9332.jpg",
+    "price": 119
+  },
+  {
+    "label": "IMG_8903",
+    "name": "Fly High, Free Bird",
+    "slug": "fly-high-free-bird",
+    "collection": "Coastal Sayings",
+    "file": "public/products/IMG_8903.jpg",
+    "price": 118
+  },
+  {
+    "label": "IMG_8916",
+    "name": "Seas The Day",
+    "slug": "seas-the-day",
+    "collection": "Coastal Sayings",
+    "file": "public/products/IMG_8916.jpg",
+    "price": 128
+  },
+  {
+    "label": "IMG_9210",
+    "name": "Cobalt Tide Pine",
+    "slug": "cobalt-tide-pine",
+    "collection": "Sea Glass Christmas Trees",
+    "file": "public/products/IMG_9210.jpg",
+    "price": 129
+  },
+  {
+    "label": "IMG_9213",
+    "name": "Starfish Harbor Glow",
+    "slug": "starfish-harbor-glow",
+    "collection": "Sea Glass Christmas Trees",
+    "file": "public/products/IMG_9213.jpg",
+    "price": 125
+  },
+  {
+    "label": "IMG_8959",
+    "name": "Starfish Tide Pine",
+    "slug": "starfish-tide-pine",
+    "collection": "Sea Glass Christmas Trees",
+    "file": "public/products/IMG_8959.jpg",
+    "price": 145
+  },
+  {
+    "label": "IMG_9279",
+    "name": "Gilded Tide Stars",
+    "slug": "gilded-tide-stars",
+    "collection": "Beach Gifts & Keepsakes",
+    "file": "public/products/IMG_9279.jpg",
+    "price": 48
+  },
+  {
+    "label": "IMG_8958",
+    "name": "Salty Sayings Shell Dishes",
+    "slug": "salty-sayings-shell-dishes",
+    "collection": "Beach Gifts & Keepsakes",
+    "file": "public/products/IMG_8958.jpg",
+    "price": 58
+  }
+]
