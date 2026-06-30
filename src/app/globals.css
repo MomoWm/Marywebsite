@@ -11,25 +11,26 @@
   --font-display: var(--font-playfair), ui-serif, "Iowan Old Style", Georgia, serif;
 
   /* ---- Brand colors ---- */
-  --color-shell: #f6f1e8;          /* warm cream page bg */
-  --color-shell-deep: #ece2d2;
-  --color-sand: #e6dac3;
-  --color-sand-light: #f1e9da;
-  --color-driftwood: #c9b59b;
+  --color-shell: #f5f2ea;          /* soft shell-sand page bg */
+  --color-shell-deep: #e9e2d3;
+  --color-sand: #e7dcc6;
+  --color-sand-light: #f0ebdc;
+  --color-driftwood: #c5b59c;
   --color-driftwood-deep: #a8916f;
-  --color-seafoam: #6fa78f;        /* seafoam green */
-  --color-seafoam-light: #d7e8df;
-  --color-aqua: #a4cdcf;           /* soft beach aqua */
-  --color-aqua-light: #dcebec;
-  --color-ocean: #b3654c;          /* TERRACOTTA — primary accent */
-  --color-ocean-deep: #9a5640;
-  --color-slate: #6f6557;          /* warm grey text */
-  --color-deepsea: #2f2a23;        /* espresso — dark surfaces & headings */
-  --color-ink: #34302a;
-  --color-ink-soft: #61584c;
-  --color-muted: #9d9384;
+  --color-seafoam: #6fae9a;        /* seafoam green */
+  --color-seafoam-light: #d6e9e3;
+  --color-aqua: #8fcdd2;           /* soft sea aqua */
+  --color-aqua-light: #dbedef;
+  --color-ocean: #3a7d99;          /* OCEAN BLUE — primary accent */
+  --color-ocean-deep: #2c6680;
+  --color-slate: #6c7b83;          /* sea-grey text */
+  --color-deepsea: #15333d;        /* deep sea — dark surfaces & headings */
+  --color-ink: #29373f;
+  --color-ink-soft: #53626a;
+  --color-muted: #99a5aa;
   --color-gold: #c2a36b;
   --color-gold-soft: #dcc9a3;
+  --color-coral: #e3927a;          /* sunset coral — occasional warm pop */
 
   /* ---- Semantic ---- */
   --color-background: var(--color-shell);

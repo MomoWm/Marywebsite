@@ -73,9 +73,9 @@ export const copy = {
       }
     ]
   },
-  "announcement": "Handcrafted in Englewood, Florida — complimentary shipping nationwide on every piece.",
+  "announcement": "Handmade in Englewood, Florida · Free shipping nationwide",
   "homeHero": {
-    "eyebrow": "Handmade in Englewood · One of a Kind",
+    "eyebrow": "One-of-a-Kind Coastal Art",
     "headline": "Handcrafted Art, *Shaped by the Sea*",
     "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, driftwood, and shells gathered along Florida's Gulf Coast — each piece carrying its own story.",
     "primaryCta": "Request a Custom Piece",

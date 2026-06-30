@@ -16,7 +16,7 @@ export function MarqueeStrip() {
   return (
     <section
       className="overflow-hidden border-y border-black/10 py-4 text-shell"
-      style={{ backgroundColor: "#3f4736" }}
+      style={{ backgroundColor: "#173a47" }}
       aria-hidden="true"
     >
       <div className="flex w-max animate-marquee items-center gap-10 whitespace-nowrap will-change-transform">

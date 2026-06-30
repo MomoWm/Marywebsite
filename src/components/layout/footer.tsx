@@ -17,7 +17,7 @@ function PinterestIcon({ className }: { className?: string }) {
 export function Footer() {
   return (
     <footer className="relative mt-10 bg-deepsea text-shell">
-      <WaveDivider fill="#213a47" className="absolute -top-px left-0 -translate-y-full" />
+      <WaveDivider fill="#15333d" className="absolute -top-px left-0 -translate-y-full" />
 
       {/* CTA band */}
       <div className="container-luxe border-b border-shell/10 py-16 text-center">

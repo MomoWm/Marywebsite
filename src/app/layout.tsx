@@ -26,7 +26,7 @@ const jost = Jost({
 export const metadata: Metadata = baseMetadata;
 
 export const viewport: Viewport = {
-  themeColor: "#213a47",
+  themeColor: "#15333d",
   width: "device-width",
   initialScale: 1,
 };

@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       <CreativeProcess />
 
-      <WaveDivider fill="#fbf9f6" className="-mt-px bg-deepsea" />
+      <WaveDivider fill="#f5f2ea" className="-mt-px bg-deepsea" />
 
       <CtaBand index={1} />
     </>

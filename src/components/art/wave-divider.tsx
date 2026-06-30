@@ -8,7 +8,7 @@ interface WaveDividerProps {
 }
 
 /** A soft, layered wave used to transition between sections. */
-export function WaveDivider({ className, fill = "#fbf9f6", flip = false }: WaveDividerProps) {
+export function WaveDivider({ className, fill = "#f5f2ea", flip = false }: WaveDividerProps) {
   return (
     <div
       className={cn("pointer-events-none w-full overflow-hidden leading-[0]", className)}

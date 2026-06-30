@@ -12,6 +12,7 @@ import { BeachBanner } from "@/components/sections/beach-banner";
 import { InstagramGallery } from "@/components/sections/instagram-gallery";
 import { NewsletterSection } from "@/components/sections/newsletter-section";
 import { CtaBand } from "@/components/sections/cta-band";
+import { WaveDivider } from "@/components/art/wave-divider";
 import {
   getProductBySlug,
   getHomepageProducts,
@@ -62,7 +63,13 @@ export default function HomePage() {
 
       <WhyHandmade image="/products/IMG_8887.jpg" />
 
+      <div className="bg-shell">
+        <WaveDivider fill="#15333d" />
+      </div>
       <CreativeProcess />
+      <div className="bg-sand-light/40">
+        <WaveDivider fill="#15333d" flip />
+      </div>
 
       <ProductShowcase
         eyebrow="Signature pieces"
