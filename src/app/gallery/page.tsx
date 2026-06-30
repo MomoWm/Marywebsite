@@ -7,15 +7,8 @@ import { CtaBand } from "@/components/sections/cta-band";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { products } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
-import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata("/gallery");
-
-const aspect: Record<string, string> = {
-  portrait: "aspect-[4/5]",
-  landscape: "aspect-[3/2]",
-  square: "aspect-square",
-};
 
 export default function GalleryPage() {
   return (
@@ -41,11 +34,11 @@ export default function GalleryPage() {
                 href={`/shop/${p.slug}`}
                 className="group relative block break-inside-avoid overflow-hidden rounded-2xl bg-shell-deep shadow-soft"
               >
-                <div className={cn("relative w-full", aspect[p.orientation ?? "portrait"])}>
+                <div className="relative aspect-[4/5] w-full">
                   <ProductMedia
                     product={p}
                     sizes="(max-width: 768px) 50vw, 25vw"
-                    artVariant={p.orientation === "landscape" ? "wide" : "portrait"}
+                    artVariant="portrait"
                     className="transition-transform duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                   />
                 </div>

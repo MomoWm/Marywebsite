@@ -8,6 +8,7 @@ import { WhyHandmade } from "@/components/sections/why-handmade";
 import { CreativeProcess } from "@/components/sections/process";
 import { ProductShowcase } from "@/components/sections/product-showcase";
 import { CollectionShowcase } from "@/components/sections/collection-showcase";
+import { BeachBanner } from "@/components/sections/beach-banner";
 import { InstagramGallery } from "@/components/sections/instagram-gallery";
 import { NewsletterSection } from "@/components/sections/newsletter-section";
 import { CtaBand } from "@/components/sections/cta-band";
@@ -54,6 +55,8 @@ export default function HomePage() {
       <TrustBar />
 
       <FeaturedCollection collection={mirrors} products={mirrorProducts} />
+
+      <BeachBanner />
 
       <MeetMary />
 
