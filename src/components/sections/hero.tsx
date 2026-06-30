@@ -26,146 +26,141 @@ export function Hero({
 }) {
   const ref = React.useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -60]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 50]);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const yArch = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -50]);
+  const yAccent = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 60]);
 
-  const [main, accentA, accentB] = images;
+  const [feature, accent] = images;
   const ease = [0.22, 1, 0.36, 1] as const;
 
   return (
-    <section
-      ref={ref}
-      className="grain relative overflow-hidden bg-gradient-to-b from-shell via-sand-light/40 to-shell"
-    >
-      {/* soft coastal glow */}
+    <section ref={ref} className="grain relative overflow-hidden bg-shell">
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 top-10 size-[34rem] rounded-full bg-aqua/30 blur-[120px]"
+        className="pointer-events-none absolute right-[-10%] top-[-8%] h-[42rem] w-[42rem] rounded-full bg-aqua/25 blur-[130px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 size-[26rem] rounded-full bg-seafoam/25 blur-[110px]"
+        className="pointer-events-none absolute bottom-[-20%] left-[-12%] h-[34rem] w-[34rem] rounded-full bg-seafoam/20 blur-[120px]"
       />
 
-      <div className="container-luxe relative grid items-center gap-12 py-16 md:py-20 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:py-24">
+      <div className="container-luxe relative grid items-center gap-10 pb-20 pt-12 md:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pb-28 lg:pt-20">
         {/* Copy */}
         <div className="max-w-xl">
           <motion.span
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="eyebrow"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-ocean"
           >
+            <span className="size-1.5 rounded-full bg-gold" />
             {eyebrow}
           </motion.span>
+
           <motion.h1
-            initial={{ opacity: 0, y: 22 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.08 }}
-            className="display-balance mt-5 font-display text-[2.6rem] leading-[1.04] text-deepsea sm:text-5xl lg:text-[3.6rem]"
+            transition={{ duration: 0.95, ease, delay: 0.08 }}
+            className="mt-6 font-display text-[clamp(2.7rem,6vw,4.6rem)] font-light leading-[0.98] tracking-[-0.02em] text-deepsea"
           >
             {headline}
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.18 }}
-            className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft"
+            transition={{ duration: 0.95, ease, delay: 0.18 }}
+            className="mt-7 max-w-md text-lg leading-relaxed text-ink-soft"
           >
             {subhead}
           </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease, delay: 0.28 }}
-            className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
+            transition={{ duration: 0.95, ease, delay: 0.28 }}
+            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
           >
             <Button asChild size="lg">
               <Link href="/custom-orders">{primaryCta}</Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/shop">
-                {secondaryCta}
-                <ArrowRight className="size-4" />
-              </Link>
-            </Button>
+            <Link
+              href="/shop"
+              className="group inline-flex items-center gap-2 px-2 py-3 text-sm font-medium uppercase tracking-[0.08em] text-deepsea"
+            >
+              {secondaryCta}
+              <ArrowRight className="size-4 text-ocean transition-transform duration-500 group-hover:translate-x-1" />
+            </Link>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className="mt-9 flex items-center gap-3 text-sm text-slate"
+            transition={{ duration: 1, delay: 0.55 }}
+            className="mt-12 flex items-center gap-4 border-t border-border pt-6 text-sm text-slate"
           >
             <span className="flex text-gold">
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} className="size-4 fill-gold" />
               ))}
             </span>
-            <span>
-              Handmade &amp; one-of-a-kind in {site.location.city},{" "}
-              {site.location.region}
+            <span className="leading-tight">
+              Handmade &amp; one-of-a-kind
+              <br className="hidden sm:block" /> in {site.location.city}, {site.location.region}
             </span>
           </motion.div>
         </div>
 
-        {/* Image composition */}
-        <div className="relative h-[26rem] sm:h-[34rem] lg:h-[40rem]">
-          {main && (
+        {/* Arched feature image */}
+        <div className="relative mx-auto h-[30rem] w-full max-w-md sm:h-[36rem] lg:h-[42rem]">
+          {feature && (
             <motion.div
-              style={{ y: y1 }}
-              initial={{ opacity: 0, scale: 0.96 }}
+              style={{ y: yArch }}
+              initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.1, ease }}
-              className="absolute left-1/2 top-1/2 z-10 h-[78%] w-[64%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[1.75rem] shadow-deep ring-1 ring-shell/60"
+              transition={{ duration: 1.2, ease }}
+              className="absolute inset-x-4 top-0 bottom-8 overflow-hidden rounded-t-[14rem] rounded-b-[2rem] shadow-deep ring-1 ring-shell/70 sm:inset-x-8"
             >
               <Image
-                src={main.image!}
-                alt={main.altText || main.name}
+                src={feature.image!}
+                alt={feature.altText || feature.name}
                 fill
                 priority
-                sizes="(max-width: 1024px) 60vw, 32vw"
+                sizes="(max-width: 1024px) 90vw, 40vw"
                 className="object-cover"
               />
+              <div className="absolute inset-0 rounded-t-[14rem] rounded-b-[2rem] ring-1 ring-inset ring-gold/15" />
             </motion.div>
           )}
-          {accentA && (
+
+          {accent && (
             <motion.div
-              style={{ y: y2 }}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease, delay: 0.2 }}
-              className="absolute left-0 top-6 z-20 h-[34%] w-[40%] animate-float-slow overflow-hidden rounded-2xl shadow-lift ring-1 ring-shell/60"
+              style={{ y: yAccent }}
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease, delay: 0.35 }}
+              className="absolute -left-2 bottom-0 z-10 h-40 w-32 overflow-hidden rounded-2xl shadow-lift ring-1 ring-shell/70 sm:-left-6 sm:h-48 sm:w-40"
             >
               <Image
-                src={accentA.image!}
-                alt={accentA.altText || accentA.name}
+                src={accent.image!}
+                alt={accent.altText || accent.name}
                 fill
-                sizes="20vw"
+                sizes="160px"
                 className="object-cover"
               />
             </motion.div>
           )}
-          {accentB && (
-            <motion.div
-              style={{ y: y1 }}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease, delay: 0.32 }}
-              className="absolute bottom-4 right-0 z-20 h-[36%] w-[38%] animate-float overflow-hidden rounded-2xl shadow-lift ring-1 ring-shell/60"
-            >
-              <Image
-                src={accentB.image!}
-                alt={accentB.altText || accentB.name}
-                fill
-                sizes="20vw"
-                className="object-cover"
-              />
-            </motion.div>
-          )}
+
+          {/* signature plate */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, ease, delay: 0.5 }}
+            className="absolute -right-1 top-8 z-10 rounded-full bg-shell/90 px-4 py-3 text-center shadow-lift backdrop-blur sm:right-2"
+          >
+            <p className="font-display text-2xl leading-none text-deepsea">No two</p>
+            <p className="mt-1 text-[0.6rem] uppercase tracking-[0.18em] text-slate">alike</p>
+          </motion.div>
         </div>
       </div>
     </section>

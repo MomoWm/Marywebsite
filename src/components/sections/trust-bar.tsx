@@ -1,43 +1,43 @@
 "use client";
 
+import * as React from "react";
 import { PillarIcon } from "@/components/ui/pillar-icon";
 import { RevealGroup } from "@/components/ui/reveal";
 import { motion } from "motion/react";
 import { copy } from "@/content/site-copy";
 
 export function TrustBar() {
+  const items = copy.brandPillars.slice(0, 5);
   return (
-    <section className="border-y border-border bg-sand-light/50">
-      <div className="container-luxe py-12">
+    <section className="border-y border-border bg-sand-light/40">
+      <div className="container-luxe py-7">
         <RevealGroup
           as="ul"
-          className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4"
-          stagger={0.08}
+          className="flex flex-wrap items-center justify-center gap-x-3 gap-y-4 sm:gap-x-6"
+          stagger={0.06}
         >
-          {copy.brandPillars.slice(0, 8).map((p) => (
-            <TrustItem key={p.title} icon={p.icon} title={p.title} desc={p.description} />
+          {items.map((p, i) => (
+            <React.Fragment key={p.title}>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+                }}
+                className="flex items-center gap-2.5"
+              >
+                <PillarIcon name={p.icon} className="size-[18px] text-ocean" />
+                <span className="text-[0.82rem] font-medium uppercase tracking-[0.12em] text-slate">
+                  {p.title}
+                </span>
+              </motion.li>
+              {i < items.length - 1 && (
+                <span aria-hidden className="hidden size-1 rounded-full bg-gold/50 sm:block" />
+              )}
+            </React.Fragment>
           ))}
         </RevealGroup>
       </div>
     </section>
-  );
-}
-
-function TrustItem({ icon, title, desc }: { icon: string; title: string; desc: string }) {
-  return (
-    <motion.li
-      variants={{
-        hidden: { opacity: 0, y: 18 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-      }}
-      className="flex flex-col items-center gap-2 text-center"
-    >
-      <span className="grid size-12 place-items-center rounded-full bg-shell text-ocean shadow-soft">
-        <PillarIcon name={icon} className="size-5" />
-      </span>
-      <span className="font-display text-base text-deepsea">{title}</span>
-      <span className="max-w-[18ch] text-xs leading-relaxed text-slate">{desc}</span>
-    </motion.li>
   );
 }
 
