@@ -69,7 +69,7 @@ export function ContactForm({ defaultSubject = "" }: { defaultSubject?: string }
       </FieldGroup>
 
       {state === "error" && (
-        <p className="text-sm text-[#b4543f]">
+        <p role="alert" aria-live="assertive" className="text-sm font-medium text-[#9e3b29]">
           Something went wrong. Please try again, or email{" "}
           <a href="mailto:seaattitudesbymarylee@gmail.com" className="underline">
             seaattitudesbymarylee@gmail.com

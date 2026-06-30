@@ -24,7 +24,11 @@ export function Label({
       )}
     >
       {children}
-      {required && <span className="ml-0.5 text-gold">*</span>}
+      {required && (
+        <span className="ml-0.5 text-[#a23a28]" aria-hidden="true">
+          *
+        </span>
+      )}
     </label>
   );
 }

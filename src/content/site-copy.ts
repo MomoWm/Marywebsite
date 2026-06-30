@@ -73,7 +73,7 @@ export const copy = {
       }
     ]
   },
-  "announcement": "Handmade in Englewood, Florida · Free shipping nationwide",
+  "announcement": "Handmade in Englewood, FL · Ships nationwide",
   "homeHero": {
     "eyebrow": "One-of-a-Kind Coastal Art",
     "headline": "Handcrafted Art, *Shaped by the Sea*",

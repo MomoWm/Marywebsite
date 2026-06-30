@@ -32,7 +32,8 @@ export default function GalleryPage() {
               <Link
                 key={p.slug}
                 href={`/shop/${p.slug}`}
-                className="group relative block break-inside-avoid overflow-hidden rounded-2xl bg-shell-deep shadow-soft"
+                aria-label={`${p.name} — ${p.productType}. View piece or commission your own.`}
+                className="group relative block break-inside-avoid overflow-hidden rounded-2xl bg-shell-deep shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ocean focus-visible:ring-offset-2"
               >
                 <div className="relative aspect-[4/5] w-full">
                   <ProductMedia
@@ -42,7 +43,7 @@ export default function GalleryPage() {
                     className="transition-transform duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-deepsea/70 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-deepsea/75 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-focus-visible:opacity-100">
                   <div className="flex items-end justify-between gap-2">
                     <div>
                       <p className="font-display text-lg text-shell">{p.name}</p>

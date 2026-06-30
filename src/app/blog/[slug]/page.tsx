@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Clock, User } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -73,8 +74,19 @@ export default async function PostPage({
             </div>
           </div>
           <div className="container-luxe pb-12">
-            <div className="relative aspect-[16/7] overflow-hidden rounded-[2rem] shadow-deep">
-              <CoastalArt seed={post.slug} palette={post.colorPalette} variant="hero" horizon className="h-full" />
+            <div className="relative aspect-[16/8] overflow-hidden rounded-[2rem] shadow-deep sm:aspect-[16/7]">
+              {post.image ? (
+                <Image
+                  src={post.image}
+                  alt={post.heroAlt || post.title}
+                  fill
+                  priority
+                  sizes="(max-width: 1280px) 100vw, 1200px"
+                  className="object-cover"
+                />
+              ) : (
+                <CoastalArt seed={post.slug} palette={post.colorPalette} variant="hero" horizon className="h-full" />
+              )}
             </div>
           </div>
         </header>

@@ -64,7 +64,7 @@ export function FeaturedCollection({
                   </div>
                   <p className="mt-2 truncate text-xs text-slate">{p.name}</p>
                   <p className="text-xs font-medium text-deepsea">
-                    {formatPrice(p.price, p.currency)}
+                    from {formatPrice(p.price, p.currency)}
                   </p>
                 </Link>
               </Reveal>

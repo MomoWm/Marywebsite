@@ -4,7 +4,6 @@ import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { footerNav, site } from "@/lib/site";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { WaveDivider } from "@/components/art/wave-divider";
-import { SeaOats } from "@/components/art/botanicals";
 
 function PinterestIcon({ className }: { className?: string }) {
   return (
@@ -19,18 +18,15 @@ export function Footer() {
     <footer className="relative mt-10 bg-deepsea text-shell">
       <WaveDivider fill="#15333d" className="absolute -top-px left-0 -translate-y-full" />
 
-      {/* CTA band */}
-      <div className="container-luxe border-b border-shell/10 py-16 text-center">
-        <SeaOats className="mx-auto mb-5 h-12 text-gold-soft/60" />
-        <p className="eyebrow !text-gold-soft">Let&rsquo;s create together</p>
-        <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl leading-tight text-shell md:text-4xl">
-          Bring a piece of the Gulf Coast into your home
-        </h2>
-        <p className="mx-auto mt-4 max-w-lg text-shell/70">
-          Commission a one-of-a-kind work, or join the list for first looks at new
-          tides of handmade pieces.
-        </p>
-        <div className="mt-8 flex flex-col items-center gap-4">
+      {/* Slim newsletter row */}
+      <div className="container-luxe border-b border-shell/10 py-10">
+        <div className="flex flex-col items-center justify-between gap-5 text-center md:flex-row md:text-left">
+          <div>
+            <p className="font-display text-xl text-shell">Join the Sea Attitudes letter</p>
+            <p className="mt-1 text-sm text-shell/70">
+              First looks at new pieces and notes from the studio.
+            </p>
+          </div>
           <NewsletterForm variant="dark" source="footer" />
         </div>
       </div>
@@ -48,10 +44,10 @@ export function Footer() {
           <Link href="/" className="font-display text-2xl text-shell">
             Sea Attitudes
           </Link>
-          <p className="mt-1 text-xs uppercase tracking-[0.3em] text-shell/60">
+          <p className="mt-1 text-xs uppercase tracking-[0.3em] text-shell/75">
             by Mary Lee
           </p>
-          <p className="mt-5 max-w-xs text-sm leading-relaxed text-shell/70">
+          <p className="mt-5 max-w-xs text-sm leading-relaxed text-shell/80">
             {site.tagline}. Handcrafted on Florida&rsquo;s Gulf Coast from genuine sea
             glass, shells and driftwood — one tide at a time.
           </p>
@@ -96,7 +92,7 @@ export function Footer() {
                 <li key={l.href}>
                   <Link
                     href={l.href}
-                    className="text-sm text-shell/75 transition-colors hover:text-shell"
+                    className="text-sm text-shell/80 transition-colors hover:text-shell"
                   >
                     {l.label}
                   </Link>
@@ -108,7 +104,7 @@ export function Footer() {
       </div>
 
       {/* Contact row */}
-      <div className="container-luxe grid gap-4 border-t border-shell/10 py-8 text-sm text-shell/70 sm:grid-cols-3">
+      <div className="container-luxe grid gap-4 border-t border-shell/10 py-8 text-sm text-shell/80 sm:grid-cols-3">
         <a href={site.phoneHref} className="flex items-center gap-2 hover:text-shell">
           <Phone className="size-4 text-gold-soft" /> {site.phone}
         </a>
@@ -122,7 +118,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-shell/10 py-6">
-        <div className="container-luxe flex flex-col items-center justify-between gap-3 text-xs text-shell/50 sm:flex-row">
+        <div className="container-luxe flex flex-col items-center justify-between gap-3 text-xs text-shell/65 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {site.legalName}. All artwork handmade &amp;
             one-of-a-kind.

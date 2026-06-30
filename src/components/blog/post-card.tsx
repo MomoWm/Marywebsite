@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { CoastalArt } from "@/components/art/coastal-art";
 import { cn } from "@/lib/utils";
@@ -22,13 +23,23 @@ export function PostCard({
           large ? "aspect-[16/10] w-full lg:w-3/5" : "aspect-[3/2] w-full",
         )}
       >
-        <CoastalArt
-          seed={post.slug}
-          palette={post.colorPalette}
-          variant={large ? "hero" : "wide"}
-          horizon
-          className="h-full transition-transform duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
-        />
+        {post.image ? (
+          <Image
+            src={post.image}
+            alt={post.heroAlt || post.title}
+            fill
+            sizes={large ? "(max-width: 1024px) 100vw, 60vw" : "(max-width: 768px) 100vw, 33vw"}
+            className="object-cover transition-transform duration-[1.4s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+          />
+        ) : (
+          <CoastalArt
+            seed={post.slug}
+            palette={post.colorPalette}
+            variant={large ? "hero" : "wide"}
+            horizon
+            className="h-full"
+          />
+        )}
         <span className="absolute left-4 top-4 rounded-full bg-shell/90 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.12em] text-deepsea backdrop-blur">
           {post.category}
         </span>

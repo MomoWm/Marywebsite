@@ -23,11 +23,11 @@
   --color-aqua-light: #dbedef;
   --color-ocean: #3a7d99;          /* OCEAN BLUE — primary accent */
   --color-ocean-deep: #2c6680;
-  --color-slate: #6c7b83;          /* sea-grey text */
+  --color-slate: #4f5d64;          /* sea-grey text (AA on sand) */
   --color-deepsea: #15333d;        /* deep sea — dark surfaces & headings */
-  --color-ink: #29373f;
-  --color-ink-soft: #53626a;
-  --color-muted: #99a5aa;
+  --color-ink: #26343c;
+  --color-ink-soft: #4b5a62;
+  --color-muted: #7c878d;
   --color-gold: #c2a36b;
   --color-gold-soft: #dcc9a3;
   --color-coral: #e3927a;          /* sunset coral — occasional warm pop */

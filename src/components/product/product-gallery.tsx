@@ -37,7 +37,7 @@ export function ProductGallery({ product }: { product: Product }) {
               {product.bestSeller && <Badge variant="glass">Signature</Badge>}
             </div>
             {hasImage && (
-              <span className="absolute bottom-4 right-4 grid size-11 place-items-center rounded-full bg-shell/90 text-deepsea opacity-0 shadow-soft backdrop-blur transition-opacity duration-500 group-hover:opacity-100">
+              <span className="absolute bottom-4 right-4 grid size-11 place-items-center rounded-full bg-shell/90 text-deepsea opacity-90 shadow-soft backdrop-blur transition-all duration-500 group-hover:scale-105 group-hover:opacity-100">
                 <ZoomIn className="size-5" />
               </span>
             )}

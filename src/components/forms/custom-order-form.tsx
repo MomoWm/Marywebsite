@@ -199,7 +199,7 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
       </fieldset>
 
       {state === "error" && (
-        <p className="text-sm text-[#b4543f]">
+        <p role="alert" aria-live="assertive" className="text-sm font-medium text-[#9e3b29]">
           Something went wrong. Please try again, or email{" "}
           <a href="mailto:seaattitudesbymarylee@gmail.com" className="underline">
             seaattitudesbymarylee@gmail.com
@@ -208,10 +208,16 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
         </p>
       )}
 
-      <Button type="submit" size="lg" disabled={state === "loading"} className="self-start">
-        {state === "loading" ? "Sending…" : "Begin my commission"}
-        <Sparkles className="size-4" />
-      </Button>
+      <div className="flex flex-col gap-3">
+        <Button type="submit" size="lg" disabled={state === "loading"} className="self-start">
+          {state === "loading" ? "Sending…" : "Begin my commission"}
+          <Sparkles className="size-4" />
+        </Button>
+        <p className="max-w-md text-sm text-slate">
+          No obligation — Mary personally replies within a day or two to talk through ideas
+          and pricing. You only commit once you love the design.
+        </p>
+      </div>
     </form>
   );
 }

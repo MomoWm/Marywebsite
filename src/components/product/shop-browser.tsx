@@ -49,7 +49,7 @@ export function ShopBrowser({
   return (
     <div>
       {/* Category pills */}
-      <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-1">
+      <div className="flex flex-wrap justify-center gap-2 sm:justify-start">
         <Pill active={category === "all"} onClick={() => setCategory("all")}>
           All pieces
         </Pill>
@@ -135,11 +135,12 @@ function Pill({
   return (
     <button
       onClick={onClick}
+      aria-pressed={active}
       className={cn(
-        "shrink-0 rounded-full border px-5 py-2.5 text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300",
+        "rounded-full border px-5 py-2.5 text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300",
         active
           ? "border-deepsea bg-deepsea text-shell"
-          : "border-seafoam/45 bg-transparent text-slate hover:border-deepsea/50 hover:text-deepsea",
+          : "border-seafoam/50 bg-transparent text-ink-soft hover:border-deepsea/50 hover:text-deepsea",
       )}
     >
       {children}

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, Clock, Facebook, Instagram } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, ArrowUpRight } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Reveal } from "@/components/ui/reveal";
+import { WaveDivider } from "@/components/art/wave-divider";
+import { Starfish, Shell } from "@/components/art/botanicals";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
 import { copy } from "@/content/site-copy";
@@ -20,8 +22,13 @@ export default async function ContactPage({
   const { contact } = copy;
 
   const details = [
-    { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
-    { icon: Phone, label: "Phone", value: site.phone, href: site.phoneHref },
+    {
+      icon: Mail,
+      label: "Email",
+      value: site.email,
+      href: `mailto:${site.email}?subject=Custom%20piece%20inquiry`,
+    },
+    { icon: Phone, label: "Call or text", value: site.phone, href: site.phoneHref },
     {
       icon: MapPin,
       label: "Studio",
@@ -97,16 +104,27 @@ export default async function ContactPage({
               </a>
             </Reveal>
 
-            <Reveal delay={0.15} className="mt-8 overflow-hidden rounded-2xl border border-border shadow-soft">
-              <iframe
-                title="Englewood, Florida"
-                src="https://www.google.com/maps?q=Englewood,Florida&output=embed"
-                width="100%"
-                height="280"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block"
-              />
+            <Reveal delay={0.15} className="mt-8">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Englewood%2C%20Florida"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative block overflow-hidden rounded-2xl bg-deepsea p-8 text-shell shadow-soft"
+              >
+                <div className="pointer-events-none absolute -right-10 -top-10 size-44 rounded-full bg-ocean/30 blur-2xl" />
+                <Starfish className="pointer-events-none absolute right-6 top-6 w-12 -rotate-12 text-shell/15" />
+                <Shell className="pointer-events-none absolute bottom-10 right-16 hidden w-10 text-shell/10 sm:block" />
+                <p className="eyebrow !text-gold-soft">Find us on the Gulf</p>
+                <p className="mt-3 font-display text-3xl text-shell">Englewood, Florida</p>
+                <p className="mt-1 text-shell/75">
+                  Florida&rsquo;s Gulf Coast · {site.location.postalCode}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-gold-soft">
+                  Open in Google Maps
+                  <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                </span>
+                <WaveDivider fill="#1c4a5a" className="absolute inset-x-0 bottom-0 opacity-60" />
+              </a>
             </Reveal>
           </div>
 

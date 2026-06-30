@@ -4,9 +4,9 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
-import { Star, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SeaOats, PalmLeaf } from "@/components/art/botanicals";
+import { Coral, PalmLeaf, Shell } from "@/components/art/botanicals";
 import { site } from "@/lib/site";
 import type { Product } from "@/lib/types";
 
@@ -35,7 +35,10 @@ export function Hero({
   const ease = [0.22, 1, 0.36, 1] as const;
 
   return (
-    <section ref={ref} className="grain relative overflow-hidden bg-shell">
+    <section
+      ref={ref}
+      className="grain relative overflow-hidden bg-gradient-to-b from-aqua-light/40 via-shell to-shell"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-10%] top-[-8%] h-[42rem] w-[42rem] rounded-full bg-aqua/25 blur-[130px]"
@@ -44,8 +47,8 @@ export function Hero({
         aria-hidden
         className="pointer-events-none absolute bottom-[-20%] left-[-12%] h-[34rem] w-[34rem] rounded-full bg-seafoam/15 blur-[120px]"
       />
-      <PalmLeaf className="pointer-events-none absolute -left-10 top-10 w-52 -rotate-12 text-seafoam/20" />
-      <SeaOats className="pointer-events-none absolute bottom-6 left-2 hidden h-40 text-ocean/15 lg:block" />
+      <PalmLeaf className="pointer-events-none absolute -left-10 top-8 hidden w-52 -rotate-12 text-seafoam/20 md:block" />
+      <Coral className="pointer-events-none absolute bottom-6 left-2 hidden h-40 text-ocean/12 lg:block" />
 
       <div className="container-luxe relative grid items-center gap-10 pb-20 pt-12 md:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pb-28 lg:pt-20">
         {/* Copy */}
@@ -106,16 +109,12 @@ export function Hero({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.55 }}
-            className="mt-12 flex items-center gap-4 border-t border-border pt-6 text-sm text-slate"
+            className="mt-12 flex items-center gap-3 border-t border-border pt-6 text-sm text-slate"
           >
-            <span className="flex text-gold">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="size-4 fill-gold" />
-              ))}
-            </span>
-            <span className="leading-tight">
-              Handmade &amp; one-of-a-kind
-              <br className="hidden sm:block" /> in {site.location.city}, {site.location.region}
+            <Shell className="size-5 shrink-0 text-seafoam" />
+            <span>
+              Made one at a time in {site.location.city}, {site.location.regionName} — no
+              two pieces alike.
             </span>
           </motion.div>
         </div>
@@ -165,10 +164,11 @@ export function Hero({
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease, delay: 0.5 }}
-            className="absolute -right-1 top-8 z-10 rounded-full bg-shell/90 px-4 py-3 text-center shadow-lift backdrop-blur sm:right-2"
+            className="absolute -right-1 top-8 z-10 rounded-full bg-shell/95 px-5 py-2.5 shadow-lift ring-1 ring-seafoam/30 backdrop-blur sm:right-2"
           >
-            <p className="font-display text-2xl leading-none text-deepsea">No two</p>
-            <p className="mt-1 text-[0.6rem] uppercase tracking-[0.18em] text-slate">alike</p>
+            <p className="font-display text-base italic leading-none text-deepsea">
+              No two alike
+            </p>
           </motion.div>
         </div>
       </div>

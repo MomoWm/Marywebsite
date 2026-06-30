@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export function MeetMary() {
   const intro = sectionIntros.meetMary;
   return (
-    <section className="bg-sand-light/40 py-20 md:py-28">
+    <section className="bg-seafoam-light/40 py-20 md:py-28">
       <div className="container-luxe grid items-center gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-16">
         <Reveal direction="right" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-deep">
@@ -36,7 +36,10 @@ export function MeetMary() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
-              {copy.about.intro}
+              Mary Lee has spent her life along the water, reading the Gulf the way others
+              read books. Every piece that leaves her Englewood studio is made entirely by
+              hand, from sea glass and shells the tide left behind — and no two are ever the
+              same.
             </p>
           </Reveal>
           <Reveal delay={0.18}>

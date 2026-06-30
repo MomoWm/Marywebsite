@@ -57,10 +57,10 @@ export function ProductCard({
           </h3>
         </div>
         <p className="shrink-0 pt-0.5 text-right leading-tight">
-          <span className="block text-[0.58rem] font-medium uppercase tracking-[0.16em] text-muted">
+          <span className="block text-[0.58rem] font-medium uppercase tracking-[0.16em] text-slate">
             from
           </span>
-          <span className="font-display text-lg text-slate">
+          <span className="font-display text-lg text-deepsea">
             {formatPrice(product.price, product.currency)}
           </span>
         </p>

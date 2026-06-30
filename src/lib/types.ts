@@ -106,6 +106,8 @@ export interface Post {
   seoTitle: string;
   seoDescription: string;
   keywords: string[];
+  /** Real photo for the article hero/card (falls back to generative art). */
+  image?: string;
 }
 
 export interface SectionIntro {

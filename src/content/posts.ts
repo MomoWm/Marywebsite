@@ -27,7 +27,8 @@ export const posts: Post[] = [
       "sea glass art Florida",
       "custom coastal artwork",
       "coastal interior design"
-    ]
+    ],
+    "image": "/products/IMG_8955.jpg"
   },
   {
     "title": "How Sea Glass Becomes Art",
@@ -55,7 +56,8 @@ export const posts: Post[] = [
       "coastal art",
       "sea glass artwork",
       "custom coastal artwork"
-    ]
+    ],
+    "image": "/products/IMG_8887.jpg"
   },
   {
     "title": "Coastal Interior Design Ideas for a Calm, Elegant Home",
@@ -83,7 +85,8 @@ export const posts: Post[] = [
       "coastal art",
       "sea glass art Florida",
       "custom coastal artwork"
-    ]
+    ],
+    "image": "/products/IMG_9205.jpg"
   },
   {
     "title": "Behind the Scenes in Mary's Studio",
@@ -111,7 +114,8 @@ export const posts: Post[] = [
       "coastal art studio",
       "coastal decor",
       "custom coastal artwork"
-    ]
+    ],
+    "image": "/products/IMG_8959.jpg"
   },
   {
     "title": "Mary's Creative Process",
@@ -139,7 +143,8 @@ export const posts: Post[] = [
       "creative process",
       "coastal art",
       "coastal decor"
-    ]
+    ],
+    "image": "/products/IMG_8915.jpg"
   },
   {
     "title": "A Coastal Gift Guide for Everyone on Your List",
@@ -167,7 +172,8 @@ export const posts: Post[] = [
       "coastal decor",
       "beach house decor",
       "handmade gifts"
-    ]
+    ],
+    "image": "/products/IMG_8958.jpg"
   },
   {
     "title": "Holiday Collections: Bringing the Gulf Coast Indoors",
@@ -195,6 +201,7 @@ export const posts: Post[] = [
       "coastal decor",
       "beach house decor",
       "custom coastal artwork"
-    ]
+    ],
+    "image": "/products/IMG_9213.jpg"
   }
 ];

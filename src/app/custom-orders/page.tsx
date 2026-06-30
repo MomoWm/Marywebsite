@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Star } from "lucide-react";
+import { Check } from "lucide-react";
 import { PageHeader } from "@/components/layout/page-header";
+import { Shell } from "@/components/art/botanicals";
 import { Reveal } from "@/components/ui/reveal";
 import { CustomOrderForm } from "@/components/forms/custom-order-form";
 import { ProductMedia } from "@/components/product/product-media";
@@ -36,13 +37,9 @@ export default async function CustomOrdersPage({
         title={customOrder.headline}
         subhead={customOrder.subhead}
       >
-        <div className="mt-6 flex items-center gap-2 text-sm text-slate">
-          <span className="flex text-gold">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="size-4 fill-gold" />
-            ))}
-          </span>
-          Loved by collectors &amp; designers nationwide
+        <div className="mt-6 flex items-center justify-center gap-2.5 text-sm text-slate">
+          <Shell className="size-5 shrink-0 text-seafoam" />
+          Every commission is one-of-a-kind, handmade in Englewood, Florida.
         </div>
       </PageHeader>
 
