@@ -12,7 +12,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/collections",
     "/custom-orders",
     "/gallery",
-    "/testimonials",
     "/faq",
     "/blog",
     "/contact",

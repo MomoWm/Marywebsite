@@ -1,6 +1,7 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
+import { BotanicalDivider } from "@/components/art/botanicals";
 
 export function Section({
   children,
@@ -60,10 +61,7 @@ export function SectionHeading({
             )
           : title}
       </Tag>
-      <span
-        className={cn("mt-1 block h-px w-14 bg-ocean/70", align === "center" && "mx-auto")}
-        aria-hidden
-      />
+      <BotanicalDivider align={align} className="mt-1" />
       {subhead && (
         <p className="max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
           {subhead}

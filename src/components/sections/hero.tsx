@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import { Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SeaOats, PalmLeaf } from "@/components/art/botanicals";
 import { site } from "@/lib/site";
 import type { Product } from "@/lib/types";
 
@@ -41,8 +42,10 @@ export function Hero({
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-[-20%] left-[-12%] h-[34rem] w-[34rem] rounded-full bg-seafoam/20 blur-[120px]"
+        className="pointer-events-none absolute bottom-[-20%] left-[-12%] h-[34rem] w-[34rem] rounded-full bg-seafoam/15 blur-[120px]"
       />
+      <PalmLeaf className="pointer-events-none absolute -left-10 top-10 w-52 -rotate-12 text-seafoam/20" />
+      <SeaOats className="pointer-events-none absolute bottom-6 left-2 hidden h-40 text-ocean/15 lg:block" />
 
       <div className="container-luxe relative grid items-center gap-10 pb-20 pt-12 md:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pb-28 lg:pt-20">
         {/* Copy */}

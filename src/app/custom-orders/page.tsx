@@ -5,11 +5,9 @@ import { PageHeader } from "@/components/layout/page-header";
 import { Reveal } from "@/components/ui/reveal";
 import { CustomOrderForm } from "@/components/forms/custom-order-form";
 import { ProductMedia } from "@/components/product/product-media";
-import { TestimonialCard } from "@/components/sections/testimonials-section";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { copy } from "@/content/site-copy";
 import { getProductBySlug, getFeatured } from "@/lib/content";
-import { testimonials } from "@/content/testimonials";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata("/custom-orders");
@@ -112,19 +110,6 @@ export default async function CustomOrdersPage({
               )}
               <CustomOrderForm reference={referenceLabel} />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Reassurance */}
-      <section className="bg-sand-light/40 py-16 md:py-20">
-        <div className="container-luxe">
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.slice(5, 8).map((t, i) => (
-              <Reveal key={t.name} delay={i * 0.1} className="h-full">
-                <TestimonialCard t={t} />
-              </Reveal>
-            ))}
           </div>
         </div>
       </section>

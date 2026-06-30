@@ -1,8 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { footerNav, site } from "@/lib/site";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { WaveDivider } from "@/components/art/wave-divider";
+import { SeaOats } from "@/components/art/botanicals";
 
 function PinterestIcon({ className }: { className?: string }) {
   return (
@@ -19,6 +21,7 @@ export function Footer() {
 
       {/* CTA band */}
       <div className="container-luxe border-b border-shell/10 py-16 text-center">
+        <SeaOats className="mx-auto mb-5 h-12 text-gold-soft/60" />
         <p className="eyebrow !text-gold-soft">Let&rsquo;s create together</p>
         <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl leading-tight text-shell md:text-4xl">
           Bring a piece of the Gulf Coast into your home
@@ -35,6 +38,13 @@ export function Footer() {
       {/* Link grid */}
       <div className="container-luxe grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
+          <Image
+            src="/brand/mark.png"
+            alt="Sea Attitudes mermaid mark"
+            width={72}
+            height={48}
+            className="mb-4 h-12 w-auto opacity-90"
+          />
           <Link href="/" className="font-display text-2xl text-shell">
             Sea Attitudes
           </Link>

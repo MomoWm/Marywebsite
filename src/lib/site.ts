@@ -65,7 +65,7 @@ export const footerNav = {
   Studio: [
     { label: "About Mary", href: "/about" },
     { label: "Custom Orders", href: "/custom-orders" },
-    { label: "Testimonials", href: "/testimonials" },
+    { label: "The Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ],
   Help: [
