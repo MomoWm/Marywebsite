@@ -46,12 +46,24 @@ export function SectionHeading({
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
       <Tag
         className={cn(
-          "display-balance text-3xl leading-[1.08] sm:text-4xl md:text-[2.9rem]",
+          "display-balance text-[1.9rem] leading-[1.12] sm:text-4xl md:text-[2.9rem]",
           titleClassName,
         )}
       >
-        {title}
+        {typeof title === "string"
+          ? title.split("*").map((seg, i) =>
+              i % 2 === 1 ? (
+                <em key={i} className="accent">{seg}</em>
+              ) : (
+                <React.Fragment key={i}>{seg}</React.Fragment>
+              ),
+            )
+          : title}
       </Tag>
+      <span
+        className={cn("mt-1 block h-px w-14 bg-ocean/70", align === "center" && "mx-auto")}
+        aria-hidden
+      />
       {subhead && (
         <p className="max-w-xl text-base leading-relaxed text-ink-soft md:text-lg">
           {subhead}

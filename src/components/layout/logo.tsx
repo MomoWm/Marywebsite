@@ -19,25 +19,25 @@ export function Logo({
     >
       <span
         className={cn(
-          "grid size-10 place-items-center rounded-full transition-colors duration-500",
-          onDark ? "bg-shell/15" : "bg-deepsea/[0.05]",
+          "grid size-11 place-items-center rounded-full border transition-colors duration-500",
+          onDark ? "border-shell/45" : "border-deepsea/35",
         )}
         aria-hidden="true"
       >
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
           <path
-            d="M2 14c2.2 0 2.2-2 4.4-2s2.2 2 4.4 2 2.2-2 4.4-2 2.2 2 4.4 2"
-            stroke={onDark ? "#fbf9f6" : "#3a6d8c"}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 18c2 0 2-1.6 4-1.6s2 1.6 4 1.6 2-1.6 4-1.6 2 1.6 4 1.6"
-            stroke="#c2a36b"
+            d="M3 13.5c2.4 0 2.4-2.2 4.8-2.2s2.4 2.2 4.8 2.2 2.4-2.2 4.8-2.2"
+            stroke={onDark ? "#f6f1e8" : "#2f2a23"}
             strokeWidth="1.4"
             strokeLinecap="round"
           />
-          <circle cx="16.5" cy="7.5" r="1.6" fill="#c2a36b" />
+          <path
+            d="M4 17c2 0 2-1.7 4-1.7s2 1.7 4 1.7 2-1.7 4-1.7"
+            stroke="#b3654c"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+          />
+          <circle cx="17" cy="7.6" r="1.5" fill="#c2a36b" />
         </svg>
       </span>
       <span className="flex flex-col leading-none">

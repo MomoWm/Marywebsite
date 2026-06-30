@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Playfair_Display, Jost } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -8,17 +8,19 @@ import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/json-ld";
 import { baseMetadata } from "@/lib/seo";
 import { copy } from "@/content/site-copy";
 
-const fraunces = Fraunces({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-playfair",
   display: "swap",
-  axes: ["opsz", "SOFT"],
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const inter = Inter({
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jost",
   display: "swap",
+  weight: ["300", "400", "500"],
 });
 
 export const metadata: Metadata = baseMetadata;
@@ -33,7 +35,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${jost.variable}`}>
       <body className="min-h-dvh bg-shell text-ink antialiased">
         <a
           href="#main"

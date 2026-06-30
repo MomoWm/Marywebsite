@@ -75,11 +75,11 @@ export const copy = {
   },
   "announcement": "Handcrafted in Englewood, Florida — complimentary shipping nationwide on every piece.",
   "homeHero": {
-    "eyebrow": "Sea Attitudes — Handcrafted Coastal Art",
-    "headline": "Art Shaped by the Sea, Made by Hand",
+    "eyebrow": "Handmade in Englewood · One of a Kind",
+    "headline": "Handcrafted Art, *Shaped by the Sea*",
     "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, driftwood, and shells gathered along Florida's Gulf Coast — each piece carrying its own story.",
     "primaryCta": "Request a Custom Piece",
-    "secondaryCta": "Shop Artwork"
+    "secondaryCta": "Explore the Gallery"
   },
   "brandPillars": [
     {

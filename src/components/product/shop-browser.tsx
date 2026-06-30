@@ -136,10 +136,10 @@ function Pill({
     <button
       onClick={onClick}
       className={cn(
-        "shrink-0 rounded-full border px-4 py-2 text-sm transition-colors duration-300",
+        "shrink-0 rounded-full border px-5 py-2.5 text-xs font-medium uppercase tracking-[0.12em] transition-colors duration-300",
         active
           ? "border-deepsea bg-deepsea text-shell"
-          : "border-border bg-white/60 text-slate hover:border-deepsea/40 hover:text-deepsea",
+          : "border-seafoam/45 bg-transparent text-slate hover:border-deepsea/50 hover:text-deepsea",
       )}
     >
       {children}

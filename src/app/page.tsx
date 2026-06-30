@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
+import { MarqueeStrip } from "@/components/sections/marquee-strip";
 import { TrustBar } from "@/components/sections/trust-bar";
 import { FeaturedCollection } from "@/components/sections/featured-collection";
 import { MeetMary } from "@/components/sections/meet-mary";
@@ -48,6 +49,8 @@ export default function HomePage() {
         secondaryCta={copy.homeHero.secondaryCta}
         images={heroImages}
       />
+
+      <MarqueeStrip />
 
       <TrustBar />
 

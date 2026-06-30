@@ -61,9 +61,15 @@ export function Hero({
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.95, ease, delay: 0.08 }}
-            className="mt-6 font-display text-[clamp(2.7rem,6vw,4.6rem)] font-light leading-[0.98] tracking-[-0.02em] text-deepsea"
+            className="mt-6 font-display text-[clamp(2.8rem,6vw,4.7rem)] font-normal leading-[1.02] tracking-[-0.01em] text-deepsea"
           >
-            {headline}
+            {headline.split("*").map((seg, i) =>
+              i % 2 === 1 ? (
+                <em key={i} className="accent">{seg}</em>
+              ) : (
+                <React.Fragment key={i}>{seg}</React.Fragment>
+              ),
+            )}
           </motion.h1>
 
           <motion.p

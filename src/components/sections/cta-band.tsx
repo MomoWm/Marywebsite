@@ -43,7 +43,12 @@ export function CtaBand({
           <p className={cn("eyebrow", deep && "!text-gold-soft")}>
             Let&rsquo;s create together
           </p>
-          <h2 className="display-balance mx-auto mt-4 max-w-2xl font-display text-3xl leading-tight md:text-[2.7rem]">
+          <h2
+            className={cn(
+              "display-balance mx-auto mt-4 max-w-2xl font-display text-3xl leading-tight md:text-[2.7rem]",
+              deep && "text-shell",
+            )}
+          >
             {block.headline}
           </h2>
           <p
