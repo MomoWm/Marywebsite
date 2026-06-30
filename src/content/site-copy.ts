@@ -79,7 +79,7 @@ export const copy = {
     "headline": "Handcrafted Art, *Shaped by the Sea*",
     "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, driftwood, and shells gathered along Florida's Gulf Coast — each piece carrying its own story.",
     "primaryCta": "Request a Custom Piece",
-    "secondaryCta": "Explore the Gallery"
+    "secondaryCta": "Explore the Collection"
   },
   "brandPillars": [
     {

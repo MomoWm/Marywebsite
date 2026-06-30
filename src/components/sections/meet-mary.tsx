@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export function MeetMary() {
   const intro = sectionIntros.meetMary;
   return (
-    <section className="bg-seafoam-light/40 py-20 md:py-28">
+    <section className="bg-seafoam-light/40 py-24 md:py-36">
       <div className="container-luxe grid items-center gap-12 lg:grid-cols-[0.85fr_1fr] lg:gap-16">
         <Reveal direction="right" className="relative mx-auto w-full max-w-sm">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-deep">

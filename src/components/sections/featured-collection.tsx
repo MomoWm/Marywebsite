@@ -17,7 +17,7 @@ export function FeaturedCollection({
   eyebrow?: string;
 }) {
   return (
-    <section className="overflow-hidden py-20 md:py-28">
+    <section className="overflow-hidden py-24 md:py-36">
       <div className="container-luxe grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal direction="right" className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-deep">

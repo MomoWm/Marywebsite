@@ -13,7 +13,7 @@ export function Section({
   id?: string;
 }) {
   return (
-    <section id={id} className={cn("py-20 md:py-28", className)}>
+    <section id={id} className={cn("py-24 md:py-36", className)}>
       {children}
     </section>
   );
@@ -39,7 +39,7 @@ export function SectionHeading({
   return (
     <Reveal
       className={cn(
-        "flex flex-col gap-4",
+        "flex flex-col gap-5",
         align === "center" ? "items-center text-center mx-auto max-w-2xl" : "items-start text-left max-w-2xl",
         className,
       )}
@@ -47,7 +47,7 @@ export function SectionHeading({
       {eyebrow && <span className="eyebrow">{eyebrow}</span>}
       <Tag
         className={cn(
-          "display-balance text-[1.9rem] leading-[1.12] sm:text-4xl md:text-[2.9rem]",
+          "display-balance text-[2rem] leading-[1.1] tracking-[-0.01em] sm:text-[2.5rem] md:text-[3.1rem]",
           titleClassName,
         )}
       >

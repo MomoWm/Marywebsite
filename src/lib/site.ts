@@ -44,13 +44,15 @@ export const sameAs = [
   site.social.pinterest,
 ];
 
-/** Primary navigation (header). */
+/**
+ * Primary navigation (header) — deliberately short. Shop, Collections and
+ * Gallery were three doors into the same work; the catalog now lives under
+ * "The Collection", with Gallery still reachable from the footer.
+ */
 export const mainNav = [
-  { label: "Shop", href: "/shop" },
-  { label: "Collections", href: "/collections" },
+  { label: "The Collection", href: "/shop" },
   { label: "Custom Orders", href: "/custom-orders" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "About", href: "/about" },
+  { label: "About Mary", href: "/about" },
   { label: "Journal", href: "/blog" },
 ] as const;
 

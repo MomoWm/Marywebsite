@@ -17,7 +17,7 @@ export function CollectionShowcase({
 }) {
   const intro = sectionIntros.featured;
   return (
-    <section className={cn("py-20 md:py-28", className)}>
+    <section className={cn("py-24 md:py-36", className)}>
       <div className="container-luxe">
         {heading && (
           <SectionHeading

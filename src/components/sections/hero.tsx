@@ -29,9 +29,8 @@ export function Hero({
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const yArch = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : -50]);
-  const yAccent = useTransform(scrollYProgress, [0, 1], [0, reduce ? 0 : 60]);
 
-  const [feature, accent] = images;
+  const [feature] = images;
   const ease = [0.22, 1, 0.36, 1] as const;
 
   return (
@@ -50,7 +49,7 @@ export function Hero({
       <PalmLeaf className="pointer-events-none absolute -left-10 top-8 hidden w-52 -rotate-12 text-seafoam/20 md:block" />
       <Coral className="pointer-events-none absolute bottom-6 left-2 hidden h-40 text-ocean/12 lg:block" />
 
-      <div className="container-luxe relative grid items-center gap-10 pb-20 pt-12 md:pt-16 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:pb-28 lg:pt-20">
+      <div className="container-luxe relative grid items-center gap-12 pb-24 pt-14 md:pt-20 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16 lg:pb-32 lg:pt-24">
         {/* Copy */}
         <div className="max-w-xl">
           <motion.span
@@ -138,24 +137,6 @@ export function Hero({
                 className="object-cover"
               />
               <div className="absolute inset-0 rounded-t-[4rem] rounded-b-[2rem] ring-1 ring-inset ring-gold/15" />
-            </motion.div>
-          )}
-
-          {accent && (
-            <motion.div
-              style={{ y: yAccent }}
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease, delay: 0.35 }}
-              className="absolute -left-2 bottom-0 z-10 h-40 w-32 overflow-hidden rounded-2xl shadow-lift ring-1 ring-shell/70 sm:-left-6 sm:h-48 sm:w-40"
-            >
-              <Image
-                src={accent.image!}
-                alt={accent.altText || accent.name}
-                fill
-                sizes="160px"
-                className="object-cover"
-              />
             </motion.div>
           )}
 

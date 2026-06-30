@@ -6,7 +6,7 @@ export function CreativeProcess() {
   const intro = sectionIntros.process;
   const steps = copy.processSteps;
   return (
-    <section className="relative overflow-hidden bg-deepsea py-20 text-shell md:py-28">
+    <section className="relative overflow-hidden bg-deepsea py-24 text-shell md:py-36">
       <div className="pointer-events-none absolute left-1/2 top-0 size-[40rem] -translate-x-1/2 rounded-full bg-ocean/20 blur-[140px]" />
       <div className="container-luxe relative">
         <SectionHeading
