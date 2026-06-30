@@ -155,7 +155,7 @@
     font-weight: 500;
     letter-spacing: 0.28em;
     text-transform: uppercase;
-    color: var(--color-ocean);
+    color: var(--color-ocean-deep); /* AA on shell/seafoam-light (~5.6:1) */
   }
 
   /* Two-tone headline accent — italic serif in terracotta */

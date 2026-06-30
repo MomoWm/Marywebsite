@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { Button } from "@/components/ui/button";
-import { SeaOats } from "@/components/art/botanicals";
+import { Shell } from "@/components/art/botanicals";
 import { copy } from "@/content/site-copy";
 import { cn } from "@/lib/utils";
 
@@ -41,8 +41,8 @@ export function CtaBand({
           </>
         )}
         <Reveal className="relative">
-          <SeaOats
-            className={cn("mx-auto mb-4 h-10", deep ? "text-gold-soft/60" : "text-ocean/50")}
+          <Shell
+            className={cn("mx-auto mb-4 h-9", deep ? "text-gold-soft/60" : "text-ocean/50")}
           />
           <p className={cn("eyebrow", deep && "!text-gold-soft")}>
             Let&rsquo;s create together

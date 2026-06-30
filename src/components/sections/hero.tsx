@@ -57,7 +57,7 @@ export function Hero({
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
-            className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-ocean"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-ocean-deep"
           >
             <span className="size-1.5 rounded-full bg-gold" />
             {eyebrow}
@@ -127,7 +127,7 @@ export function Hero({
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.2, ease }}
-              className="absolute inset-x-4 top-0 bottom-8 overflow-hidden rounded-t-[14rem] rounded-b-[2rem] shadow-deep ring-1 ring-shell/70 sm:inset-x-8"
+              className="absolute inset-x-4 top-0 bottom-8 overflow-hidden rounded-t-[4rem] rounded-b-[2rem] shadow-deep ring-1 ring-shell/70 sm:inset-x-8"
             >
               <Image
                 src={feature.image!}
@@ -137,7 +137,7 @@ export function Hero({
                 sizes="(max-width: 1024px) 90vw, 40vw"
                 className="object-cover"
               />
-              <div className="absolute inset-0 rounded-t-[14rem] rounded-b-[2rem] ring-1 ring-inset ring-gold/15" />
+              <div className="absolute inset-0 rounded-t-[4rem] rounded-b-[2rem] ring-1 ring-inset ring-gold/15" />
             </motion.div>
           )}
 

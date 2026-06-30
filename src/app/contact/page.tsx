@@ -57,14 +57,14 @@ export default async function ContactPage({
                     <span className="grid size-11 shrink-0 place-items-center rounded-full bg-seafoam-light/60 text-ocean">
                       <d.icon className="size-5" strokeWidth={1.5} />
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-xs uppercase tracking-[0.16em] text-slate">{d.label}</p>
                       {d.href ? (
-                        <a href={d.href} className="font-display text-lg text-deepsea hover:text-ocean">
+                        <a href={d.href} className="font-display text-base text-deepsea break-words hover:text-ocean sm:text-lg">
                           {d.value}
                         </a>
                       ) : (
-                        <p className="font-display text-lg text-deepsea">{d.value}</p>
+                        <p className="font-display text-base text-deepsea break-words sm:text-lg">{d.value}</p>
                       )}
                     </div>
                   </div>

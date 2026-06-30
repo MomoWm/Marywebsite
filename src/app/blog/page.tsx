@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/page-header";
 import { PostCard } from "@/components/blog/post-card";
 import { Reveal } from "@/components/ui/reveal";
-import { NewsletterSection } from "@/components/sections/newsletter-section";
+import { CtaBand } from "@/components/sections/cta-band";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { posts } from "@/content/posts";
 import { pageMetadata } from "@/lib/seo";
@@ -43,7 +43,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <NewsletterSection />
+      <CtaBand index={1} tone="soft" />
     </>
   );
 }

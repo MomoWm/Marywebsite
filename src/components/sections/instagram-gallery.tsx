@@ -21,7 +21,7 @@ export function InstagramGallery({ products }: { products: Product[] }) {
               href={site.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 font-medium text-ocean"
+              className="mt-4 inline-flex items-center gap-2 font-medium text-ocean-deep"
             >
               <Instagram className="size-4" />
               @seaattitudesbymarylee

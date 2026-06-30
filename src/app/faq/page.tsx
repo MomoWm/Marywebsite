@@ -75,7 +75,7 @@ export default function FaqPage() {
 
             <p className="rounded-2xl border border-border bg-sand-light/40 p-6 text-ink-soft">
               Can&rsquo;t find what you need?{" "}
-              <Link href="/contact" className="font-medium text-ocean underline underline-offset-2">
+              <Link href="/contact" className="font-medium text-ocean-deep underline underline-offset-2">
                 Send Mary a note
               </Link>{" "}
               — she answers every message personally.

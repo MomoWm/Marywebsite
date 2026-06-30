@@ -62,7 +62,7 @@ export function PostCard({
           {post.title}
         </h3>
         <p className="mt-3 line-clamp-3 leading-relaxed text-ink-soft">{post.excerpt}</p>
-        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-ocean">
+        <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-ocean-deep">
           Read the story
           <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5" />
         </span>

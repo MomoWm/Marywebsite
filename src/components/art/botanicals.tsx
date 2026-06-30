@@ -1,45 +1,15 @@
 import { cn } from "@/lib/utils";
 
 /**
- * Hand-drawn coastal botanicals — thin line art that gives the site an
- * illustrated, beach-gathered personality (sea oats, blooms, shells, coral,
- * palm, starfish). All use `currentColor`, so color them with text-* classes.
+ * Hand-drawn coastal motifs — thin line art that gives the site an
+ * illustrated, gathered-from-the-shore personality: branching coral, kelp,
+ * shells, starfish, and a palm frond. All use `currentColor`, so color them
+ * with text-* classes. Everything here is unmistakably oceanic — no flowers,
+ * no wheat, nothing that grows on land.
  */
 
 type IconProps = { className?: string };
 const base = "inline-block";
-
-export function SeaOats({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 48 64" fill="none" className={cn(base, className)} aria-hidden="true">
-      <g stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 62V20" />
-        <path d="M24 22c-3-2-5-6-5-10 3 1 5 4 5 8M24 22c3-2 5-6 5-10-3 1-5 4-5 8" />
-        <path d="M24 30c-3-2-5-5-5-9 3 1 5 3 5 7M24 30c3-2 5-5 5-9-3 1-5 3-5 7" />
-        <path d="M24 38c-3-2-5-5-5-8 3 1 5 3 5 6M24 38c3-2 5-5 5-8-3 1-5 3-5 6" />
-        <path d="M24 46c-3-2-4-4-4-7 2 1 4 3 4 5M24 46c3-2 4-4 4-7-2 1-4 3-4 5" />
-      </g>
-    </svg>
-  );
-}
-
-export function Bloom({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 48 48" fill="none" className={cn(base, className)} aria-hidden="true">
-      <g stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="24" cy="24" r="3.4" />
-        <path d="M24 20.6c-1.2-4-0.6-7.6 0-9 0.6 1.4 1.2 5 0 9Z" />
-        <path d="M27.4 24c4-1.2 7.6-0.6 9 0-1.4 0.6-5 1.2-9 0Z" />
-        <path d="M24 27.4c1.2 4 0.6 7.6 0 9-0.6-1.4-1.2-5 0-9Z" />
-        <path d="M20.6 24c-4 1.2-7.6 0.6-9 0 1.4-0.6 5-1.2 9 0Z" />
-        <path d="M26.4 21.6c3-2.8 6.4-3.6 7.8-3.6-0.6 1.3-3 4-7.8 3.6Z" />
-        <path d="M26.4 26.4c3 2.8 6.4 3.6 7.8 3.6-0.6-1.3-3-4-7.8-3.6Z" />
-        <path d="M21.6 26.4c-3 2.8-6.4 3.6-7.8 3.6 0.6-1.3 3-4 7.8-3.6Z" />
-        <path d="M21.6 21.6c-3-2.8-6.4-3.6-7.8-3.6 0.6 1.3 3 4 7.8 3.6Z" />
-      </g>
-    </svg>
-  );
-}
 
 export function Starfish({ className }: IconProps) {
   return (
@@ -75,31 +45,45 @@ export function PalmLeaf({ className }: IconProps) {
   );
 }
 
+/** Branching reef coral — a forking trunk with rounded polyp tips. */
 export function Coral({ className }: IconProps) {
   return (
     <svg viewBox="0 0 48 56" fill="none" className={cn(base, className)} aria-hidden="true">
-      <g stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M24 54V30" />
-        <path d="M24 40c-2-3-6-4-8-9-3 1-2 6 2 8M24 34c2-3 6-3 8-8 3 1 2 6-2 8" />
-        <path d="M24 30c-3-3-3-8-1-12-3-1-6 3-5 8M24 30c3-3 3-8 1-12 3-1 6 3 5 8" />
-        <path d="M24 22c-1-3 0-7 2-10M24 22c1-3 0-7-2-10" />
+      <g stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M24 54V44" />
+        <path d="M24 44C24 36 24 28 24 17" />
+        <path d="M24 44c-2-5-6-6-8-11" />
+        <path d="M16 33c-1-4 0-7-2-11" />
+        <path d="M16 33c2-3 5-3 6-7" />
+        <path d="M24 44c2-5 6-6 8-11" />
+        <path d="M32 33c1-4 0-7 2-11" />
+        <path d="M32 33c-2-3-5-3-6-7" />
+      </g>
+      <g fill="currentColor" stroke="none">
+        <circle cx="24" cy="15" r="1.6" />
+        <circle cx="14" cy="21" r="1.5" />
+        <circle cx="22" cy="25" r="1.5" />
+        <circle cx="34" cy="21" r="1.5" />
+        <circle cx="26" cy="25" r="1.5" />
       </g>
     </svg>
   );
 }
 
-export function Sprig({ className }: IconProps) {
+/** A single strand of kelp — a wavy frond with two drifting offshoots. */
+export function Kelp({ className }: IconProps) {
   return (
     <svg viewBox="0 0 32 48" fill="none" className={cn(base, className)} aria-hidden="true">
-      <g stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 46V8" />
-        <path d="M16 18c-4-1-7-4-8-8 4 0 7 2 8 6M16 26c4-1 7-4 8-8-4 0-7 2-8 6M16 34c-3-1-6-3-7-7 3 0 6 1 7 5" />
+      <g stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 46C11 39 21 33 16 26C11 19 21 13 16 6" />
+        <path d="M16 30C20 28 23 25 23 20" />
+        <path d="M16 22C12 20 10 17 10 12" />
       </g>
     </svg>
   );
 }
 
-/** A small decorative divider — short rules flanking a coastal bloom. */
+/** A small decorative divider — short rules flanking a starfish, with kelp. */
 export function BotanicalDivider({
   className,
   align = "center",
@@ -117,9 +101,9 @@ export function BotanicalDivider({
       aria-hidden="true"
     >
       <span className="h-px w-10 bg-ocean/30" />
-      <Sprig className="h-5 w-3.5 -scale-x-100 text-seafoam" />
-      <Bloom className="size-4 text-ocean" />
-      <Sprig className="h-5 w-3.5 text-seafoam" />
+      <Kelp className="h-5 w-3.5 -scale-x-100 text-seafoam" />
+      <Starfish className="size-4 text-ocean" />
+      <Kelp className="h-5 w-3.5 text-seafoam" />
       <span className="h-px w-10 bg-ocean/30" />
     </div>
   );

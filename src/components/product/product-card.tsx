@@ -48,7 +48,7 @@ export function ProductCard({
       <div className="mt-4 flex items-start justify-between gap-3">
         <div>
           {collection && (
-            <p className="text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ocean">
+            <p className="text-[0.68rem] font-medium uppercase tracking-[0.16em] text-ocean-deep">
               {collection.name}
             </p>
           )}

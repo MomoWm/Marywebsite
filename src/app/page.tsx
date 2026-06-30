@@ -10,7 +10,6 @@ import { ProductShowcase } from "@/components/sections/product-showcase";
 import { CollectionShowcase } from "@/components/sections/collection-showcase";
 import { BeachBanner } from "@/components/sections/beach-banner";
 import { InstagramGallery } from "@/components/sections/instagram-gallery";
-import { NewsletterSection } from "@/components/sections/newsletter-section";
 import { CtaBand } from "@/components/sections/cta-band";
 import { WaveDivider } from "@/components/art/wave-divider";
 import {
@@ -86,8 +85,6 @@ export default function HomePage() {
       <CtaBand index={0} />
 
       <InstagramGallery products={homepage.length ? homepage : signature} />
-
-      <NewsletterSection />
 
       <CtaBand index={3} tone="soft" href="/custom-orders" secondaryLabel="Ask a question" />
     </>
