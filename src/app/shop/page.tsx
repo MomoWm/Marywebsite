@@ -15,7 +15,7 @@ export default function ShopPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },
-          { name: "Shop", href: "/shop" },
+          { name: "The Collection", href: "/shop" },
         ]}
       />
       <PageHeader

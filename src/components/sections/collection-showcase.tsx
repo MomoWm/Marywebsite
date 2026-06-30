@@ -17,7 +17,13 @@ export function CollectionShowcase({
 }) {
   const intro = sectionIntros.featured;
   return (
-    <section className={cn("py-24 md:py-36", className)}>
+    <section
+      className={cn(
+        // drop redundant top padding when this follows a page header
+        heading ? "py-24 md:py-36" : "pb-24 pt-6 md:pb-36 md:pt-10",
+        className,
+      )}
+    >
       <div className="container-luxe">
         {heading && (
           <SectionHeading

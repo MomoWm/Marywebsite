@@ -58,7 +58,7 @@ export default async function ProductPage({
       <BreadcrumbJsonLd
         items={[
           { name: "Home", href: "/" },
-          { name: "Shop", href: "/shop" },
+          { name: "The Collection", href: "/shop" },
           { name: product.name, href: `/shop/${product.slug}` },
         ]}
       />
@@ -69,7 +69,7 @@ export default async function ProductPage({
             className="mb-8"
             items={[
               { name: "Home", href: "/" },
-              { name: "Shop", href: "/shop" },
+              { name: "The Collection", href: "/shop" },
               { name: product.name, href: `/shop/${product.slug}` },
             ]}
           />
