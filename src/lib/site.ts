@@ -13,7 +13,7 @@ export const site = {
   tagline: "Handcrafted Art Inspired by the Sea",
   description:
     "One-of-a-kind coastal artwork handcrafted in Englewood, Florida from genuine sea glass, crushed glass, shells and resin. Sea glass mirrors, shadow boxes, and custom commissions.",
-  url: "https://www.seaattitudes.com",
+  url: "https://seaattitudes.vercel.app",
   email: "seaattitudesbymarylee@gmail.com",
   phone: "203-704-1230",
   phoneHref: "tel:+12037041230",

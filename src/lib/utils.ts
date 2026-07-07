@@ -45,9 +45,11 @@ export function sample<T>(arr: T[], count: number): T[] {
   return Array.from({ length: count }, (_, i) => arr[Math.floor(i * step)]);
 }
 
+// Live production URL. Override with NEXT_PUBLIC_SITE_URL in Vercel once a
+// custom domain is connected (e.g. https://www.seaattitudes.com).
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
-  "https://www.seaattitudes.com";
+  "https://seaattitudes.vercel.app";
 
 export function absoluteUrl(path = "") {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
