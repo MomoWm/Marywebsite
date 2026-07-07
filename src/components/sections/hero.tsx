@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Coral, PalmLeaf, Shell } from "@/components/art/botanicals";
 import { site } from "@/lib/site";
@@ -108,13 +108,38 @@ export function Hero({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.55 }}
-            className="mt-12 flex items-center gap-3 border-t border-border pt-6 text-sm text-slate"
+            className="mt-12 border-t border-border pt-6"
           >
-            <Shell className="size-5 shrink-0 text-seafoam" />
-            <span>
-              Made one at a time in {site.location.city}, {site.location.regionName} — no
-              two pieces alike.
-            </span>
+            <div className="flex items-center gap-3 text-sm text-slate">
+              <Shell className="size-5 shrink-0 text-seafoam" />
+              <span>
+                Made one at a time in {site.location.city}, {site.location.regionName} — no
+                two pieces alike.
+              </span>
+            </div>
+            <div className="mt-5 flex items-center gap-3">
+              <span className="text-xs font-medium uppercase tracking-[0.16em] text-slate">
+                Follow along
+              </span>
+              <a
+                href={site.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Sea Attitudes on Facebook"
+                className="grid size-10 place-items-center rounded-full border border-border text-ocean-deep transition-colors hover:border-ocean hover:bg-white/60 hover:text-ocean"
+              >
+                <Facebook className="size-4" />
+              </a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mary Lee on Instagram"
+                className="grid size-10 place-items-center rounded-full border border-border text-ocean-deep transition-colors hover:border-ocean hover:bg-white/60 hover:text-ocean"
+              >
+                <Instagram className="size-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
 

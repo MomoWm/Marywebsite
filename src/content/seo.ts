@@ -19,7 +19,7 @@ export const seoBusiness = {
   ],
   "sameAs": [
     "https://www.facebook.com/seaattitudes",
-    "https://www.instagram.com/seaattitudes",
+    "https://www.instagram.com/mary_ellen_lee65",
     "https://www.pinterest.com/seaattitudes"
   ]
 } as const;

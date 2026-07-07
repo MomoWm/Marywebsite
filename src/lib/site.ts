@@ -33,7 +33,7 @@ export const site = {
   ],
   social: {
     facebook: "https://www.facebook.com/seaattitudesbymarylee",
-    instagram: "https://www.instagram.com/seaattitudesbymarylee",
+    instagram: "https://www.instagram.com/mary_ellen_lee65",
     pinterest: "https://www.pinterest.com/seaattitudesbymarylee",
   },
 } as const;
