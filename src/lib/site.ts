@@ -12,7 +12,7 @@ export const site = {
   role: "Coastal Artist",
   tagline: "Handcrafted Art Inspired by the Sea",
   description:
-    "One-of-a-kind coastal artwork handcrafted in Englewood, Florida from genuine sea glass, shells, driftwood and resin. Sea glass mirrors, shadow boxes, and custom commissions.",
+    "One-of-a-kind coastal artwork handcrafted in Englewood, Florida from genuine sea glass, crushed glass, shells and resin. Sea glass mirrors, shadow boxes, and custom commissions.",
   url: "https://www.seaattitudes.com",
   email: "seaattitudesbymarylee@gmail.com",
   phone: "203-704-1230",
@@ -32,7 +32,7 @@ export const site = {
     "Custom consultations: Mon–Sat",
   ],
   social: {
-    facebook: "https://www.facebook.com/seaattitudesbymarylee",
+    facebook: "https://www.facebook.com/share/1EM5nbDicd/",
     instagram: "https://www.instagram.com/mary_ellen_lee65",
     pinterest: "https://www.pinterest.com/seaattitudesbymarylee",
   },

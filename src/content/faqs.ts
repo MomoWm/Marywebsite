@@ -52,7 +52,7 @@ export const faqGroups: FaqGroup[] = [
     "items": [
       {
         "question": "Can I commission a custom piece?",
-        "answer": "Absolutely, and it's some of our most loved work. Mary creates custom commissions inspired by your favorite stretch of coastline, the palette of a particular room, or a memory you want to hold onto. Tell us the feeling you're after and we'll translate it into sea glass, shell, driftwood, and resin made just for you."
+        "answer": "Absolutely, and it's some of our most loved work. Mary creates custom commissions inspired by your favorite stretch of coastline, the palette of a particular room, or a memory you want to hold onto. Tell us the feeling you're after and we'll translate it into sea glass, crushed glass, shell, and resin made just for you."
       },
       {
         "question": "How does the custom process work?",
@@ -77,7 +77,7 @@ export const faqGroups: FaqGroup[] = [
     "items": [
       {
         "question": "What are your pieces made from?",
-        "answer": "Each work is composed of genuine sea glass, crushed glass, shells, driftwood, resin, and other natural coastal materials, chosen and arranged by hand. We don't use mass-produced components or printed reproductions. What you bring home is real material from the natural world, given a second life as art."
+        "answer": "Each work is composed of genuine sea glass, crushed glass, shells, resin, and other natural coastal materials, chosen and arranged by hand. We don't use mass-produced components or printed reproductions. What you bring home is real material from the natural world, given a second life as art."
       },
       {
         "question": "Is everything truly handmade and one-of-a-kind?",
@@ -93,7 +93,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         "question": "Where does your sea glass and material come from?",
-        "answer": "Our materials are gathered and sourced with care and a deep respect for the shoreline that inspires them. Genuine sea glass is increasingly rare, so we treat every piece as the small treasure it is, combining found and ethically sourced glass, shells, and driftwood into work that honors where it came from."
+        "answer": "Our materials are sourced with care and a deep respect for the shoreline that inspires them. Genuine sea glass is increasingly rare, so we treat every piece as the small treasure it is, combining genuine and ethically sourced sea glass, crushed glass, and shells into work that honors where it came from."
       }
     ]
   },

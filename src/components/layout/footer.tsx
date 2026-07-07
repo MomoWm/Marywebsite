@@ -49,7 +49,7 @@ export function Footer() {
           </p>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-shell/80">
             {site.tagline}. Handcrafted on Florida&rsquo;s Gulf Coast from genuine sea
-            glass, shells and driftwood — one tide at a time.
+            glass, crushed glass and shells — one tide at a time.
           </p>
           <div className="mt-6 flex gap-3">
             <a

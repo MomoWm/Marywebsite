@@ -69,12 +69,12 @@ export const products: Product[] = [
       "natural seashells",
       "dried starfish",
       "faux pearls",
-      "reclaimed driftwood frame",
+      "reclaimed wood frame",
       "mirror glass",
       "clear resin"
     ],
-    "shortDescription": "An arched mirror framed in a shoreline of crushed aqua sea glass, natural starfish and scattered shells, set in weathered whitewashed driftwood.",
-    "description": "A handmade statement mirror that brings the quiet glamour of the Gulf shoreline indoors. The softly arched looking glass is surrounded by a thick, glistening border of crushed sea glass in shades of seafoam, aqua and clear surf-tumbled tones, set in resin so it catches the light like wet sand at low tide. Genuine dried starfish anchor opposite corners, while natural cockle and scallop shells and a few luminous pearls are tucked along the edges, as though the tide left them behind. The whole piece is cradled in a reclaimed driftwood frame, whitewashed and gently distressed to echo sun-bleached dock wood. Each shell is placed by hand and no two mirrors are ever alike.",
+    "shortDescription": "An arched mirror framed in a shoreline of crushed aqua sea glass, natural starfish and scattered shells, set in weathered whitewashed wood.",
+    "description": "A handmade statement mirror that brings the quiet glamour of the Gulf shoreline indoors. The softly arched looking glass is surrounded by a thick, glistening border of crushed sea glass in shades of seafoam, aqua and clear surf-tumbled tones, set in resin so it catches the light like wet sand at low tide. Genuine dried starfish anchor opposite corners, while natural cockle and scallop shells and a few luminous pearls are tucked along the edges, as though the tide left them behind. The whole piece is cradled in a reclaimed wood frame, whitewashed and gently distressed to echo sun-bleached dock wood. Each shell is placed by hand and no two mirrors are ever alike.",
     "story": "Mary Lee gathers her glass and shells along the Englewood beaches of Florida's Gulf Coast, sorting each piece by color and tide-worn softness before building her borders one shard at a time. This mirror began with a length of weathered dock wood and a handful of seafoam glass, layered and set in resin over several days so the shoreline seems to ripple right up to the edge of the glass. The starfish were chosen for their symmetry, the pearls for the way they catch morning light. It is meant to hang where it can hold a little of the sky and the sea at once.",
     "care": "Dust gently with a dry, soft cloth. Keep out of prolonged direct sun to preserve the sea-glass tones, and hang from a secure wall anchor. Avoid liquid cleaners on the glass, shell and resin surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -83,12 +83,12 @@ export const products: Product[] = [
     "oneOfAKind": true,
     "seasonal": false,
     "available": true,
-    "seoTitle": "Tidewater Reflection Sea Glass Mirror | Handmade Coastal Driftwood Mirror",
-    "seoDescription": "Handcrafted sea glass mirror with crushed aqua glass, natural starfish and shells in a whitewashed driftwood frame. A one-of-a-kind coastal statement piece by Sea Attitudes by Mary Lee.",
+    "seoTitle": "Tidewater Reflection Sea Glass Mirror | Handmade Coastal Wood-Framed Mirror",
+    "seoDescription": "Handcrafted sea glass mirror with crushed aqua glass, natural starfish and shells in a whitewashed wood frame. A one-of-a-kind coastal statement piece by Sea Attitudes by Mary Lee.",
     "keywords": [
       "sea glass mirror",
       "coastal mirror",
-      "driftwood mirror",
+      "wood-framed mirror",
       "crushed glass mirror",
       "starfish mirror",
       "beach house decor",
@@ -97,7 +97,7 @@ export const products: Product[] = [
       "nautical mirror",
       "Florida sea glass art"
     ],
-    "altText": "Handmade arched mirror bordered with crushed aqua sea glass, natural starfish, shells and pearls in a weathered whitewashed driftwood frame.",
+    "altText": "Handmade arched mirror bordered with crushed aqua sea glass, natural starfish, shells and pearls in a weathered whitewashed wood frame.",
     "colorPalette": [
       "#7FB7BE",
       "#A8D5D8",
@@ -129,8 +129,8 @@ export const products: Product[] = [
       "weathered wood frame",
       "clear resin"
     ],
-    "shortDescription": "A driftwood-framed mirror edged in crushed turquoise and clear sea glass, crowned with a natural starfish and a shoreline of shells.",
-    "description": "A handcrafted wall mirror framed in weathered driftwood-gray wood, its glass surface bordered by a glittering mosaic of crushed sea glass that fades from deep turquoise into a frosted clear shore. A natural sugar starfish anchors the upper corner, while a scatter of luminous faux pearls and a low tideline of real seashells and crushed black glass settle along the base like sand at the water's edge. Each piece of glass is hand-laid and set in clear resin, so no two mirrors are ever alike. The reflective center keeps the composition light and airy, making it equally at home above a coastal console, in a powder room, or leaning on a bedroom dresser.",
+    "shortDescription": "A wood-framed mirror edged in crushed turquoise and clear sea glass, crowned with a natural starfish and a shoreline of shells.",
+    "description": "A handcrafted wall mirror framed in weathered gray wood, its glass surface bordered by a glittering mosaic of crushed sea glass that fades from deep turquoise into a frosted clear shore. A natural sugar starfish anchors the upper corner, while a scatter of luminous faux pearls and a low tideline of real seashells and crushed black glass settle along the base like sand at the water's edge. Each piece of glass is hand-laid and set in clear resin, so no two mirrors are ever alike. The reflective center keeps the composition light and airy, making it equally at home above a coastal console, in a powder room, or leaning on a bedroom dresser.",
     "story": "Mary Lee builds each mirror the way the Gulf builds a beach: layer by patient layer. The turquoise here was sorted by hand from genuine and crushed glass to capture that exact shade of shallow Englewood water on a clear morning, then graded into clear toward the mirror so the eye reads it as surf meeting sand. The starfish and shells were gathered along Florida's Gulf Coast, and the dark crushed-glass shoreline grounds the whole piece in the wrack line where the prettiest finds always wash up. It is a one-of-a-kind reflection of the sea she lives beside.",
     "care": "Dust gently with a dry, soft cloth. Keep out of prolonged direct sun to preserve the sea-glass tones, and hang from a secure wall anchor. Avoid liquid cleaners on the glass, shell and resin surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -148,7 +148,7 @@ export const products: Product[] = [
       "starfish mirror",
       "turquoise sea glass decor",
       "handmade beach mirror",
-      "driftwood frame mirror",
+      "wood-frame mirror",
       "seashell mirror",
       "Florida coastal art",
       "nautical bathroom mirror"
@@ -183,7 +183,7 @@ export const products: Product[] = [
       "mirror glass",
       "resin"
     ],
-    "shortDescription": "A whitewashed driftwood mirror edged in glittering sea-glass surf, with a natural shell bed and a single starfish resting at the crest.",
+    "shortDescription": "A whitewashed wood mirror edged in glittering sea-glass surf, with a natural shell bed and a single starfish resting at the crest.",
     "description": "A portrait mirror framed in soft, whitewashed weathered wood and bordered entirely in crushed sea glass that catches the light like sunlit shoreline foam. The pale aqua and frosted-clear glass gathers toward the base into a true tide line, where a bed of natural seashells - scallops, cockles and tiny spirals - settles into dark sand-toned grains. A creamy starfish clings to the upper right corner, the quiet focal point of the piece. Each shell is hand-placed and the glass hand-laid in resin, so no two mirrors are ever the same. The result is calm, luminous and unmistakably coastal - a reflection framed by the sea itself.",
     "story": "Mary builds each of these mirrors the way the Gulf builds a shoreline - one layer at a time. She lays the crushed sea glass by hand around the reflective center, letting it crest and break toward a lower shell bed gathered from genuine Florida beach finds. The lone starfish in the corner is chosen last, set where the eye naturally rests. Made one piece at a time in her Englewood studio, this mirror carries the calm of a low-tide morning into any room.",
     "care": "Dust gently with a dry, soft cloth. Keep out of prolonged direct sun to preserve the sea-glass tones, and hang from a secure wall anchor. Avoid liquid cleaners on the glass, shell and resin surfaces.",
@@ -194,13 +194,13 @@ export const products: Product[] = [
     "seasonal": false,
     "available": true,
     "seoTitle": "Tidewater Starfish Sea Glass Mirror | Handmade Coastal Decor",
-    "seoDescription": "Handcrafted sea-glass mirror in a whitewashed driftwood frame with a real shell bed and starfish accent. One-of-a-kind coastal wall art from Englewood, Florida.",
+    "seoDescription": "Handcrafted sea-glass mirror in a whitewashed wood frame with a real shell bed and starfish accent. One-of-a-kind coastal wall art from Englewood, Florida.",
     "keywords": [
       "sea glass mirror",
       "coastal mirror",
       "starfish mirror",
       "shell mirror",
-      "driftwood mirror",
+      "wood-framed mirror",
       "beach house decor",
       "handmade coastal art",
       "crushed glass mirror",
@@ -366,7 +366,7 @@ export const products: Product[] = [
       "resin beach scene",
       "Florida coastal art",
       "nautical shadow box",
-      "whitewashed driftwood frame",
+      "whitewashed wood frame",
       "seashell wall art"
     ],
     "altText": "Whitewashed wood shadow box with a sea-green mermaid over swirled resin, real shells and starfish below, and wooden fish spelling Beach Please.",
@@ -396,10 +396,10 @@ export const products: Product[] = [
       "natural seashells",
       "resin",
       "hand-painted resin sea turtle",
-      "driftwood-style frame"
+      "weathered wood frame"
     ],
     "shortDescription": "A young sea turtle glides across layered cobalt and aqua sea glass toward a sun-warmed shore of shells and copper sand.",
-    "description": "A single sea turtle paddles through a glittering current of crushed sea glass, its hand-painted amber shell catching the light against deep navy and bright turquoise water. A warm gold sun rises in the upper corner, while the shoreline below is built from genuine scallop and spiral shells nestled into glints of copper-brown sand. Everything is set in glass-smooth resin and bordered by a softly distressed whitewashed wood frame, giving the scene the cool, weathered feel of driftwood found after a tide. Compact enough for a shelf, a gallery wall, or a windowsill where the light can move through the glass.",
+    "description": "A single sea turtle paddles through a glittering current of crushed sea glass, its hand-painted amber shell catching the light against deep navy and bright turquoise water. A warm gold sun rises in the upper corner, while the shoreline below is built from genuine scallop and spiral shells nestled into glints of copper-brown sand. Everything is set in glass-smooth resin and bordered by a softly distressed whitewashed wood frame, giving the scene the cool, weathered feel of sun-bleached wood. Compact enough for a shelf, a gallery wall, or a windowsill where the light can move through the glass.",
     "story": "Mary builds each underwater scene by hand, sorting sea glass by shade to pour the gradient from the darkest depths up into the shallows. The turtle is placed last, mid-stroke, as though it simply wandered into the frame. No two of these tides ever set the same way.",
     "care": "Dust gently with a dry, soft cloth and keep out of prolonged direct sun. Display indoors, away from moisture; avoid liquid cleaners on the glass and shell surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -448,10 +448,10 @@ export const products: Product[] = [
       "natural seashells",
       "dried starfish",
       "resin",
-      "driftwood-finish wood frame"
+      "weathered wood frame"
     ],
-    "shortDescription": "A garnet-red sea-glass octopus drifts through misty teal water in this handmade coastal shadow box, framed in weathered driftwood gray.",
-    "description": "A deep garnet octopus, hand-built from thousands of fragments of crushed sea glass, hovers over a luminous seabed in this one-of-a-kind shadow box. Above it, clouds of aqua and seafoam glass bloom like soft coral against a rippling, water-washed background, while a cobalt and sky-blue glass floor glitters at the base. Real Gulf Coast seashells and a single dried starfish nestle into the sand line, and the octopus regards you with a pair of playful, gleaming eyes. Set in a driftwood-gray wood frame and sealed under glass, the piece holds genuine depth and movement, the colors shifting with the light throughout the day. Individually handmade in Englewood, Florida, no two are ever alike.",
+    "shortDescription": "A garnet-red sea-glass octopus drifts through misty teal water in this handmade coastal shadow box, framed in weathered weathered gray wood.",
+    "description": "A deep garnet octopus, hand-built from thousands of fragments of crushed sea glass, hovers over a luminous seabed in this one-of-a-kind shadow box. Above it, clouds of aqua and seafoam glass bloom like soft coral against a rippling, water-washed background, while a cobalt and sky-blue glass floor glitters at the base. Real Gulf Coast seashells and a single dried starfish nestle into the sand line, and the octopus regards you with a pair of playful, gleaming eyes. Set in a weathered gray-wood frame and sealed under glass, the piece holds genuine depth and movement, the colors shifting with the light throughout the day. Individually handmade in Englewood, Florida, no two are ever alike.",
     "story": "Inspired by the curious octopuses that tuck into the rocks along Florida's Gulf shore, this scene began with a handful of deep red glass and the idea of a creature both regal and a little mischievous. Each fragment was placed by hand, layer over layer, until the octopus seemed to swim.",
     "care": "Dust gently with a dry, soft cloth and keep out of prolonged direct sun. Display indoors, away from moisture; avoid liquid cleaners on the glass and shell surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -461,7 +461,7 @@ export const products: Product[] = [
     "seasonal": false,
     "available": true,
     "seoTitle": "Garnet Octopus Sea Glass Shadow Box | Handmade Coastal Wall Art",
-    "seoDescription": "Handmade crushed sea-glass octopus shadow box with real shells and starfish, framed in driftwood gray. One-of-a-kind coastal wall art from Englewood, FL.",
+    "seoDescription": "Handmade crushed sea-glass octopus shadow box with real shells and starfish, framed in weathered gray wood. One-of-a-kind coastal wall art from Englewood, FL.",
     "keywords": [
       "sea glass octopus",
       "octopus shadow box",
@@ -474,7 +474,7 @@ export const products: Product[] = [
       "octopus home decor",
       "ocean wall art"
     ],
-    "altText": "Handmade shadow box with a deep red crushed sea-glass octopus, aqua and seafoam coral, and a blue glass seabed with real shells and a starfish in a driftwood-gray frame.",
+    "altText": "Handmade shadow box with a deep red crushed sea-glass octopus, aqua and seafoam coral, and a blue glass seabed with real shells and a starfish in a weathered gray-wood frame.",
     "colorPalette": [
       "#5a1320",
       "#2f8f93",
@@ -651,7 +651,7 @@ export const products: Product[] = [
     "materials": [
       "genuine sea glass",
       "hand-painted accents",
-      "driftwood-toned detailing",
+      "weathered wood-toned detailing",
       "wood shadow-box frame",
       "glass front"
     ],
@@ -753,8 +753,8 @@ export const products: Product[] = [
       "resin",
       "weathered wood shadow box frame"
     ],
-    "shortDescription": "A breeze-bent palm rendered in seafoam-green sea glass and a copper-flecked trunk, set against driftwood-grey in a deep shadow box.",
-    "description": "A single palm leans into the Gulf wind, its fronds drawn from softly tumbled green sea glass that catches the light like fronds catch the afternoon sun. The trunk is built up in warm copper and amber crushed glass, each fragment hand-placed to suggest the texture of weathered bark. The whole scene floats over a washed driftwood-grey background within a deep, weathered wood shadow box, giving the piece a quiet sense of depth and dimension. Individually handmade from genuine sea glass and natural coastal materials, no two are ever exactly alike.",
+    "shortDescription": "A breeze-bent palm rendered in seafoam-green sea glass and a copper-flecked trunk, set against weathered grey wood in a deep shadow box.",
+    "description": "A single palm leans into the Gulf wind, its fronds drawn from softly tumbled green sea glass that catches the light like fronds catch the afternoon sun. The trunk is built up in warm copper and amber crushed glass, each fragment hand-placed to suggest the texture of weathered bark. The whole scene floats over a washed weathered grey wood background within a deep, weathered wood shadow box, giving the piece a quiet sense of depth and dimension. Individually handmade from genuine sea glass and natural coastal materials, no two are ever exactly alike.",
     "story": "Inspired by the lone palms that line the Gulf shoreline near Englewood, Florida, this piece captures the way a single tree bends and sways against an endless coastal sky. Each frond and fragment of trunk is hand-laid by Mary Lee, one shard of sea glass at a time.",
     "care": "Dust gently with a dry, soft cloth and keep out of prolonged direct sun. Display indoors, away from moisture; avoid liquid cleaners on the glass and shell surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -897,7 +897,7 @@ export const products: Product[] = [
     "dimensions": "14\" x 11\"",
     "materials": [
       "Genuine aqua sea glass",
-      "Whitewashed driftwood frame",
+      "Whitewashed wood frame",
       "Fine hanging cord",
       "Shadow-box glazing"
     ],
@@ -912,12 +912,12 @@ export const products: Product[] = [
     "seasonal": false,
     "available": true,
     "seoTitle": "Tide Line Garland | Aqua Sea Glass Shadow Box",
-    "seoDescription": "A minimalist coastal shadow box with four frosted aqua sea-glass shards strung in a delicate garland, framed in distressed whitewashed driftwood. Handmade in Englewood, Florida.",
+    "seoDescription": "A minimalist coastal shadow box with four frosted aqua sea-glass shards strung in a delicate garland, framed in distressed whitewashed wood. Handmade in Englewood, Florida.",
     "keywords": [
       "sea glass shadow box",
       "aqua sea glass art",
       "coastal wall decor",
-      "driftwood frame",
+      "wood frame",
       "handmade beach art",
       "minimalist coastal",
       "Englewood Florida artist",
@@ -925,7 +925,7 @@ export const products: Product[] = [
       "Gulf coast decor",
       "one of a kind"
     ],
-    "altText": "Landscape whitewashed driftwood shadow box holding four frosted aqua sea-glass shards strung along a fine line against a white background.",
+    "altText": "Landscape whitewashed wood shadow box holding four frosted aqua sea-glass shards strung along a fine line against a white background.",
     "colorPalette": [
       "#A9D4D6",
       "#B9DCDC",
@@ -1053,14 +1053,14 @@ export const products: Product[] = [
     "dimensions": "10\" x 7\"",
     "materials": [
       "genuine sea glass",
-      "natural driftwood",
+      "weathered wood",
       "white wood shadow-box frame",
       "archival ink hand-lettering",
       "glass-front display"
     ],
-    "shortDescription": "A flock of seven sea-glass songbirds gathered on a driftwood branch beneath the hand-lettered words \"Fly High, Free Bird.\"",
-    "description": "Seven small birds, each shaped from a single piece of genuine tumbled sea glass, perch wing-to-wing along a length of natural Gulf Coast driftwood. Their colors move down the line like a quiet melody — moss green, soft slate blue, sunlit yellow, and a single frosted-white fledgling at the center — each fitted with delicately inked legs and beaks. Above them, the words \"Fly High, Free Bird\" are hand-lettered in an unhurried script. Set within a clean white shadow-box frame with a deep recessed gap, the piece holds light and air around every bird, giving the little flock room to breathe.",
-    "story": "Every bird here began as a wave-worn shard collected along the beaches of Englewood, Florida, its edges softened by years in the Gulf. Mary Lee sorts each fragment by color and curve, then arranges the flock by hand so no two birds — and no two pieces — are ever quite alike. The branch is true driftwood, chosen for the gentle arc it lends the composition. A tender keepsake for new beginnings, graduations, or remembering someone who taught you to spread your wings.",
+    "shortDescription": "A flock of seven sea-glass songbirds gathered on a weathered wood branch beneath the hand-lettered words \"Fly High, Free Bird.\"",
+    "description": "Seven small birds, each shaped from a single piece of genuine tumbled sea glass, perch wing-to-wing along a length of weathered Gulf Coast wood. Their colors move down the line like a quiet melody — moss green, soft slate blue, sunlit yellow, and a single frosted-white fledgling at the center — each fitted with delicately inked legs and beaks. Above them, the words \"Fly High, Free Bird\" are hand-lettered in an unhurried script. Set within a clean white shadow-box frame with a deep recessed gap, the piece holds light and air around every bird, giving the little flock room to breathe.",
+    "story": "Every bird here began as a wave-worn shard collected along the beaches of Englewood, Florida, its edges softened by years in the Gulf. Mary Lee sorts each fragment by color and curve, then arranges the flock by hand so no two birds — and no two pieces — are ever quite alike. The branch is weathered wood, chosen for the gentle arc it lends the composition. A tender keepsake for new beginnings, graduations, or remembering someone who taught you to spread your wings.",
     "care": "Dust gently with a dry, soft cloth and keep out of prolonged direct sun. Display indoors, away from moisture; avoid liquid cleaners on the glass and shell surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
     "featured": false,
@@ -1069,12 +1069,12 @@ export const products: Product[] = [
     "seasonal": false,
     "available": true,
     "seoTitle": "Fly High, Free Bird Sea Glass Shadow Box | Sea Attitudes by Mary Lee",
-    "seoDescription": "Handmade sea-glass shadow box featuring seven coastal songbirds on driftwood beneath the words \"Fly High, Free Bird.\" One-of-a-kind coastal art from Englewood, Florida.",
+    "seoDescription": "Handmade sea-glass shadow box featuring seven coastal songbirds on a weathered branch beneath the words \"Fly High, Free Bird.\" One-of-a-kind coastal art from Englewood, Florida.",
     "keywords": [
       "sea glass shadow box",
       "fly high free bird",
       "coastal bird art",
-      "driftwood wall art",
+      "coastal wall art",
       "sea glass birds",
       "inspirational coastal decor",
       "handmade beach art",
@@ -1082,7 +1082,7 @@ export const products: Product[] = [
       "graduation keepsake",
       "coastal sayings"
     ],
-    "altText": "White shadow-box frame holding seven sea-glass birds in green, blue, yellow and white on a driftwood branch below the hand-lettered phrase \"Fly High, Free Bird.\"",
+    "altText": "White shadow-box frame holding seven sea-glass birds in green, blue, yellow and white on a weathered wood branch below the hand-lettered phrase \"Fly High, Free Bird.\"",
     "colorPalette": [
       "#5E8C4E",
       "#3F7DA8",
@@ -1111,7 +1111,7 @@ export const products: Product[] = [
       "crushed glass salt detail"
     ],
     "shortDescription": "A trio of sea-glass margaritas, each garnished with a lime wedge and a salted rim, beneath the hand-lettered words \"Always Stay Salty.\"",
-    "description": "Three frosted green margaritas line up across a crisp white ground, each one shaped from a genuine fragment of sea glass softened by years in the Gulf. A slim hand-lettered lime perches on every rim, while delicate dots of white trace the salted edge and a whisper of crushed glass glints at the base of each stem. Above them, \"Always Stay Salty\" is lettered by hand in a relaxed, easygoing script. Framed in a weathered driftwood-gray shadow box, it is a small, witty piece made for a bar cart, a kitchen shelf, or the powder room of anyone who lives by the water and the cocktail hour alike.",
+    "description": "Three frosted green margaritas line up across a crisp white ground, each one shaped from a genuine fragment of sea glass softened by years in the Gulf. A slim hand-lettered lime perches on every rim, while delicate dots of white trace the salted edge and a whisper of crushed glass glints at the base of each stem. Above them, \"Always Stay Salty\" is lettered by hand in a relaxed, easygoing script. Framed in a weathered gray shadow box, it is a small, witty piece made for a bar cart, a kitchen shelf, or the powder room of anyone who lives by the water and the cocktail hour alike.",
     "story": "Mary gathers her glass by hand along the Englewood shoreline, choosing only the pieces the tide has frosted smooth. Each margarita here began as a single sea-worn shard, set and lettered one at a time so that no two glasses tilt quite the same way. It is a reminder, she says, to keep a little salt in your spirit and a little sweetness in your glass.",
     "care": "Dust gently with a dry, soft cloth and keep out of prolonged direct sun. Display indoors, away from moisture; avoid liquid cleaners on the glass and shell surfaces.",
     "shipping": "Each piece is hand-wrapped and shipped from Englewood, Florida within 3–5 business days, fully insured. Ships nationwide; complimentary Gulf Coast local delivery available on request.",
@@ -1121,7 +1121,7 @@ export const products: Product[] = [
     "seasonal": false,
     "available": true,
     "seoTitle": "Always Stay Salty Sea Glass Margarita Shadow Box | Sea Attitudes by Mary Lee",
-    "seoDescription": "Handmade sea-glass margarita shadow box lettered \"Always Stay Salty.\" Three frosted green cocktails with lime and salted rims in a driftwood-gray frame. One-of-a-kind coastal art from Englewood, Florida.",
+    "seoDescription": "Handmade sea-glass margarita shadow box lettered \"Always Stay Salty.\" Three frosted green cocktails with lime and salted rims in a weathered gray-wood frame. One-of-a-kind coastal art from Englewood, Florida.",
     "keywords": [
       "sea glass art",
       "Always Stay Salty",
@@ -1134,7 +1134,7 @@ export const products: Product[] = [
       "tequila lover gift",
       "bar cart decor"
     ],
-    "altText": "Sea-glass shadow box with three frosted green margarita glasses, lime wedges and salted rims, lettered \"Always Stay Salty\" in a driftwood-gray frame.",
+    "altText": "Sea-glass shadow box with three frosted green margarita glasses, lime wedges and salted rims, lettered \"Always Stay Salty\" in a weathered gray-wood frame.",
     "colorPalette": [
       "#7CA882",
       "#A7C9A0",

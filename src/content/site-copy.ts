@@ -7,7 +7,7 @@ export const sectionIntros: Record<string, { eyebrow: string; title: string; sub
   "meetMary": {
     "eyebrow": "The Artist",
     "title": "Meet Mary Lee",
-    "subhead": "The hands, the eye, and the Gulf Coast walks behind every piece that leaves the studio."
+    "subhead": "The hands, the eye, and the Gulf Coast that shapes every piece that leaves the studio."
   },
   "whyHandmade": {
     "eyebrow": "Why It Matters",
@@ -55,8 +55,8 @@ export const copy = {
   "about": {
     "eyebrow": "The Artist Behind the Tide",
     "headline": "Mary Lee, and a Life Spent by the Water",
-    "intro": "Sea Attitudes began the way the best things often do — quietly, on a beach in Englewood, Florida, with a pocketful of sea glass and the kind of attention only the Gulf Coast can teach you. Mary Lee gathers what the ocean leaves behind and gives it a second life as art meant to be lived with.",
-    "story": "Mary has always belonged to the water. She grew up reading tides the way other people read books, learning that the most beautiful things are rarely perfect — they're shaped, softened, and made singular by time. Every morning along Florida's Gulf Coast offers a new gift: a shard of frosted sea glass, a curl of driftwood, a shell worn smooth by a thousand waves.\n\nWhat started as walks with no particular destination became a calling. Mary found she couldn't leave these small treasures behind, and she couldn't bear to see them sit in a jar on a shelf. So she began to compose with them — arranging color, texture, and light into pieces that hold the feeling of the coast long after you've left the sand.\n\nToday, every work that leaves her studio is made entirely by hand, one at a time. There is no factory, no assembly line, no two pieces alike. Mary chooses each material herself, lets the natural shapes guide the design, and finishes each piece as though it were going into her own home — because, in a sense, it always is.\n\nSea Attitudes is a small business in the truest sense: a single artist, a stretch of Gulf coastline, and a belief that the most meaningful decor is the kind made slowly, with intention, and inspired by something real.",
+    "intro": "Sea Attitudes began the way the best things often do — quietly, in Englewood, Florida, out of a lifelong love of the Gulf Coast and a fascination with genuine sea glass. Mary Lee shapes sea glass, crushed glass, and shells into one-of-a-kind art meant to be lived with.",
+    "story": "Mary has always belonged to the water. She grew up reading tides the way other people read books, learning that the most beautiful things are rarely perfect — they're shaped, softened, and made singular by time. Genuine sea glass carries that same quiet history: each frosted piece has been tumbled smooth over years, and no two are ever the same.\n\nWhat began as a fascination with these small treasures became a calling. Mary couldn't stop composing with them — arranging color, texture, and light into pieces that hold the feeling of the coast long after you've left the sand.\n\nToday, every work that leaves her studio is made entirely by hand, one at a time. There is no factory, no assembly line, no two pieces alike. Mary chooses each material herself, lets the natural shapes guide the design, and finishes each piece as though it were going into her own home — because, in a sense, it always is.\n\nSea Attitudes is a small business in the truest sense: a single artist, a stretch of Gulf coastline, and a belief that the most meaningful decor is the kind made slowly, with intention, and inspired by something real.",
     "pullQuote": "The ocean does the first half of the work. I just listen to what each piece wants to become.",
     "values": [
       {
@@ -77,7 +77,7 @@ export const copy = {
   "homeHero": {
     "eyebrow": "One-of-a-Kind Coastal Art",
     "headline": "Handcrafted Art, *Shaped by the Sea*",
-    "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, driftwood, and shells gathered along Florida's Gulf Coast — each piece carrying its own story.",
+    "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, crushed glass, and shells, inspired by Florida's Gulf Coast — each piece carrying its own story.",
     "primaryCta": "Request a Custom Piece",
     "secondaryCta": "Explore the Collection"
   },
@@ -105,7 +105,7 @@ export const copy = {
     {
       "icon": "shell",
       "title": "Premium Materials",
-      "description": "Genuine sea glass, driftwood, shells, and fine resin — natural materials chosen for beauty and longevity."
+      "description": "Genuine sea glass, crushed glass, shells, and fine resin — natural materials chosen for beauty and longevity."
     },
     {
       "icon": "sparkles",
@@ -130,7 +130,7 @@ export const copy = {
     },
     {
       "title": "Truly One of a Kind",
-      "body": "Because every shard of sea glass and curl of driftwood is unique, your piece is impossible to replicate. You own the only one of its kind."
+      "body": "Because every shard of sea glass and piece of crushed glass is unique, your piece is impossible to replicate. You own the only one of its kind."
     },
     {
       "title": "Materials with a Past",
@@ -144,8 +144,8 @@ export const copy = {
   "processSteps": [
     {
       "step": "01",
-      "title": "Gathered from the Gulf",
-      "description": "Mary walks the Englewood shoreline collecting sea glass, driftwood, and shells — choosing only the pieces worth keeping."
+      "title": "Sourced with Care",
+      "description": "Each piece begins with genuine sea glass, crushed glass, and shells — hand-selected so only the ones worth keeping reach the studio."
     },
     {
       "step": "02",
@@ -172,7 +172,7 @@ export const copy = {
     "eyebrow": "Commissions",
     "headline": "A Piece Made Entirely for You",
     "subhead": "Bring your vision to life with a custom work designed around your colors, your space, and your story.",
-    "body": "Some pieces are meant to be exactly yours. Whether you're matching the palette of a coastal living room, marking a meaningful moment, or imagining something no one else owns, Mary will design a one-of-a-kind work from the ground up.\n\nThe process is collaborative and unhurried. You share what you have in mind — a feeling, a color, a place — and Mary translates it into genuine sea glass, driftwood, and natural materials gathered from Florida's Gulf Coast. The result is a piece that belongs nowhere else but in your home.",
+    "body": "Some pieces are meant to be exactly yours. Whether you're matching the palette of a coastal living room, marking a meaningful moment, or imagining something no one else owns, Mary will design a one-of-a-kind work from the ground up.\n\nThe process is collaborative and unhurried. You share what you have in mind — a feeling, a color, a place — and Mary translates it into genuine sea glass, crushed glass, and natural materials inspired by Florida's Gulf Coast. The result is a piece that belongs nowhere else but in your home.",
     "steps": [
       {
         "title": "Share Your Vision",

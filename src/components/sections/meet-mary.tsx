@@ -38,8 +38,8 @@ export function MeetMary() {
             <p className="mt-6 text-lg leading-relaxed text-ink-soft">
               Mary Lee has spent her life along the water, reading the Gulf the way others
               read books. Every piece that leaves her Englewood studio is made entirely by
-              hand, from sea glass and shells the tide left behind — and no two are ever the
-              same.
+              hand, from genuine sea glass, crushed glass, and shells — and no two are ever
+              the same.
             </p>
           </Reveal>
           <Reveal delay={0.18}>

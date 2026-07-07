@@ -39,7 +39,7 @@ export const seoRoutes: Record<string, { title: string; description: string; key
   },
   "/about": {
     "title": "About Mary Lee | Englewood, Florida Sea Glass Artist",
-    "description": "Meet Mary Lee, the Southwest Florida artist behind Sea Attitudes. Each coastal piece is handcrafted from genuine sea glass, shells, and driftwood.",
+    "description": "Meet Mary Lee, the Southwest Florida artist behind Sea Attitudes. Each coastal piece is handcrafted from genuine sea glass, crushed glass, and shells.",
     "keywords": [
       "Florida coastal artist",
       "Englewood Florida artist",
@@ -63,7 +63,7 @@ export const seoRoutes: Record<string, { title: string; description: string; key
   },
   "/collections": {
     "title": "Coastal Art Collections | Sea Attitudes Florida",
-    "description": "Explore curated collections: Gulf Coast Sea Glass, Driftwood & Shell, Resin Tide, Coastal Mirrors, and more handcrafted coastal artwork.",
+    "description": "Explore curated collections: Gulf Coast Sea Glass, Crushed Glass & Shell, Resin Tide, Coastal Mirrors, and more handcrafted coastal artwork.",
     "keywords": [
       "coastal decor",
       "sea glass collections",
@@ -87,7 +87,7 @@ export const seoRoutes: Record<string, { title: string; description: string; key
   },
   "/gallery": {
     "title": "Gallery of Handcrafted Sea Glass Art | Sea Attitudes",
-    "description": "A gallery of handcrafted coastal artwork made from sea glass, shells, driftwood, and resin. One-of-a-kind pieces inspired by the Gulf Coast.",
+    "description": "A gallery of handcrafted coastal artwork made from sea glass, crushed glass, shells, and resin. One-of-a-kind pieces inspired by the Gulf Coast.",
     "keywords": [
       "sea glass art Florida",
       "coastal decor",
@@ -161,7 +161,7 @@ export const brandKeywords: string[] = [
   "Englewood Florida artist",
   "Southwest Florida artist",
   "coastal wall decor",
-  "driftwood art",
+  "crushed glass art",
   "shell art",
   "resin coasters",
   "coastal mirrors",
