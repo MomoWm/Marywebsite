@@ -4,24 +4,39 @@ import * as React from "react";
 import { Send, Check } from "lucide-react";
 import { Label, Input, Textarea, FieldGroup } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
+import { leadMailto } from "@/lib/mailto";
 
 export function ContactForm({ defaultSubject = "" }: { defaultSubject?: string }) {
-  const [state, setState] = React.useState<"idle" | "loading" | "done" | "error">("idle");
+  const [state, setState] = React.useState<
+    "idle" | "loading" | "done" | "manual" | "error"
+  >("idle");
+  const [mailto, setMailto] = React.useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("loading");
     const form = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(form.entries());
+    const payload = Object.fromEntries(form.entries()) as Record<string, string>;
+    const link = leadMailto(
+      `New message from ${payload.name || "the website"}${payload.subject ? ` — ${payload.subject}` : ""}`,
+      payload,
+    );
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      setState(res.ok ? "done" : "error");
+      const json = (await res.json().catch(() => ({}))) as { delivered?: boolean };
+      if (res.ok && json.delivered) setState("done");
+      else if (res.ok) {
+        setMailto(link);
+        setState("manual");
+      } else setState("error");
     } catch {
-      setState("error");
+      // Network hiccup — still give them a guaranteed way through.
+      setMailto(link);
+      setState("manual");
     }
   }
 
@@ -35,6 +50,34 @@ export function ContactForm({ defaultSubject = "" }: { defaultSubject?: string }
         <p className="mt-2 text-ink-soft">
           Thank you for reaching out — Mary reads every note personally and will be in
           touch within a day or two.
+        </p>
+      </div>
+    );
+  }
+
+  if (state === "manual") {
+    return (
+      <div className="rounded-2xl border border-border bg-seafoam-light/40 p-10 text-center">
+        <span className="grid mx-auto size-14 place-items-center rounded-full bg-shell text-ocean shadow-soft">
+          <Send className="size-7" />
+        </span>
+        <h3 className="mt-5 font-display text-2xl text-deepsea">One quick tap to send</h3>
+        <p className="mx-auto mt-2 max-w-sm text-ink-soft">
+          Your message is ready — tap below and it opens in your email, already written
+          out for Mary. Just press send.
+        </p>
+        <Button asChild size="lg" className="mt-6">
+          <a href={mailto}>
+            Send to Mary
+            <Send className="size-4" />
+          </a>
+        </Button>
+        <p className="mt-4 text-sm text-muted">
+          Or reach her directly at{" "}
+          <a href="mailto:seaattitudesbymarylee@gmail.com" className="underline">
+            seaattitudesbymarylee@gmail.com
+          </a>
+          .
         </p>
       </div>
     );

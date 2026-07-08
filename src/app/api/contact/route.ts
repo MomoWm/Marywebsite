@@ -13,11 +13,11 @@ export async function POST(req: Request) {
       );
     }
     // Honeypot: silently accept bots without delivering.
-    if (parsed.data.company) return NextResponse.json({ ok: true });
+    if (parsed.data.company) return NextResponse.json({ ok: true, delivered: true });
 
     const { company: _company, ...lead } = parsed.data;
-    await deliverLead("Contact", lead);
-    return NextResponse.json({ ok: true });
+    const result = await deliverLead("Contact", lead);
+    return NextResponse.json({ ok: true, delivered: result.delivered });
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });
   }

@@ -12,8 +12,8 @@ export async function POST(req: Request) {
         { status: 400 },
       );
     }
-    await deliverLead("Newsletter", parsed.data);
-    return NextResponse.json({ ok: true });
+    const result = await deliverLead("Newsletter", parsed.data);
+    return NextResponse.json({ ok: true, delivered: result.delivered });
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });
   }

@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
-import { Sparkles, Check, ImagePlus, X } from "lucide-react";
+import { Sparkles, ImagePlus, X, Send } from "lucide-react";
 import { Label, Input, Textarea, Select, FieldGroup } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
+import { leadMailto } from "@/lib/mailto";
 
 const PROJECT_TYPES = [
   "Sea Glass Mirror",
@@ -30,7 +31,10 @@ const BUDGETS = ["Under $150", "$150 – $300", "$300 – $600", "$600+", "Not s
 const TIMELINES = ["No rush", "Within a month", "1 – 3 months", "I have a specific date"];
 
 export function CustomOrderForm({ reference = "" }: { reference?: string }) {
-  const [state, setState] = React.useState<"idle" | "loading" | "done" | "error">("idle");
+  const [state, setState] = React.useState<
+    "idle" | "loading" | "done" | "manual" | "error"
+  >("idle");
+  const [mailto, setMailto] = React.useState("");
   const [files, setFiles] = React.useState<string[]>([]);
 
   function onFiles(e: React.ChangeEvent<HTMLInputElement>) {
@@ -46,16 +50,27 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
       ...Object.fromEntries(form.entries()),
       attachments: files,
     };
-    delete (payload as Record<string, unknown>).inspiration;
+    const data = payload as Record<string, unknown>;
+    delete data.inspiration;
+    const link = leadMailto(
+      `New custom commission from ${data.name || "the website"}`,
+      data,
+    );
     try {
       const res = await fetch("/api/custom-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      setState(res.ok ? "done" : "error");
+      const json = (await res.json().catch(() => ({}))) as { delivered?: boolean };
+      if (res.ok && json.delivered) setState("done");
+      else if (res.ok) {
+        setMailto(link);
+        setState("manual");
+      } else setState("error");
     } catch {
-      setState("error");
+      setMailto(link);
+      setState("manual");
     }
   }
 
@@ -72,6 +87,34 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
           Thank you for trusting Mary with your vision. She&rsquo;ll personally review
           your inspiration and reach out within one to two days to begin designing a
           one-of-a-kind piece, made from scratch just for you.
+        </p>
+      </div>
+    );
+  }
+
+  if (state === "manual") {
+    return (
+      <div className="rounded-3xl border border-border bg-seafoam-light/40 p-10 text-center md:p-14">
+        <span className="grid mx-auto size-16 place-items-center rounded-full bg-shell text-gold shadow-soft">
+          <Send className="size-8" />
+        </span>
+        <h3 className="mt-6 font-display text-3xl text-deepsea">One last tap to send</h3>
+        <p className="mx-auto mt-3 max-w-md text-ink-soft">
+          Your commission details are ready — tap below and they open in your email,
+          already written out for Mary. Just press send and she&rsquo;ll take it from there.
+        </p>
+        <Button asChild size="lg" className="mt-7">
+          <a href={mailto}>
+            Send to Mary
+            <Send className="size-4" />
+          </a>
+        </Button>
+        <p className="mt-4 text-sm text-muted">
+          Or reach her directly at{" "}
+          <a href="mailto:seaattitudesbymarylee@gmail.com" className="underline">
+            seaattitudesbymarylee@gmail.com
+          </a>
+          .
         </p>
       </div>
     );
