@@ -44,8 +44,11 @@ export async function deliverLead(
   }
 
   // 1b. Web3Forms — free, no dashboard to manage. A single public access key
-  // (WEB3FORMS_ACCESS_KEY) emails every submission straight to Mary's inbox.
-  const web3key = process.env.WEB3FORMS_ACCESS_KEY;
+  // emails every submission straight to Mary's inbox. The key is public by
+  // design (Web3Forms expects it client-side), so it ships in the code; an
+  // env var can override it later if needed.
+  const web3key =
+    process.env.WEB3FORMS_ACCESS_KEY || "95860b0f-813b-4f36-865e-fb0189f8c138";
   if (web3key) {
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
