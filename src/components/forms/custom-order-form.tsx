@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { leadMailto } from "@/lib/mailto";
 
 const WEB3FORMS_KEY = "95860b0f-813b-4f36-865e-fb0189f8c138";
+const IMGBB_KEY = "c630c9acfcbde616ecc117c98e69a72c";
 
 const PROJECT_TYPES = [
   "Sea Glass Mirror",
@@ -61,27 +62,47 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
     delete mailData.company;
     setMailto(leadMailto(`New custom commission from ${raw.name || "the website"}`, mailData));
 
-    // Send as multipart so the actual inspiration photos attach to the email.
-    const fd = new FormData();
-    fd.append("access_key", WEB3FORMS_KEY);
-    fd.append("subject", `New custom commission from ${raw.name || "the website"}`);
-    fd.append("from_name", "Sea Attitudes website");
-    fd.append("replyto", raw.email || "");
-    fd.append("Name", raw.name || "");
-    fd.append("Email", raw.email || "");
-    fd.append("Phone", raw.phone || "—");
-    fd.append("Piece", raw.projectType || "—");
-    fd.append("Room", raw.room || "—");
-    fd.append("Size", raw.dimensions || "—");
-    fd.append("Colors", raw.colors || "—");
-    fd.append("Budget", raw.budget || "—");
-    fd.append("Timeline", raw.timeline || "—");
-    fd.append("Vision", raw.message || "");
-    files.slice(0, 4).forEach((file, i) => fd.append(`Inspiration photo ${i + 1}`, file, file.name));
+    // 1. Host the inspiration photos on ImgBB (free) so they become viewable
+    //    links inside the email. Failures are skipped so the request still sends.
+    const photoLinks: string[] = [];
+    for (const file of files.slice(0, 4)) {
+      try {
+        const img = new FormData();
+        img.append("image", file);
+        const up = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_KEY}`, {
+          method: "POST",
+          body: img,
+        });
+        const uj = (await up.json().catch(() => null)) as { data?: { url?: string } } | null;
+        if (uj?.data?.url) photoLinks.push(uj.data.url);
+      } catch {
+        /* skip this photo, keep the request going */
+      }
+    }
 
+    // 2. Send the request via Web3Forms, with photo links Mary can tap to view.
     try {
-      // No Content-Type header — the browser sets the multipart boundary.
-      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New custom commission from ${raw.name || "the website"}`,
+          from_name: "Sea Attitudes website",
+          replyto: raw.email,
+          Name: raw.name,
+          Email: raw.email,
+          Phone: raw.phone || "—",
+          Piece: raw.projectType || "—",
+          Room: raw.room || "—",
+          Size: raw.dimensions || "—",
+          Colors: raw.colors || "—",
+          Budget: raw.budget || "—",
+          Timeline: raw.timeline || "—",
+          Vision: raw.message,
+          "Inspiration photos": photoLinks.length ? photoLinks.join("\n") : "None attached",
+        }),
+      });
       const json = (await res.json().catch(() => ({}))) as {
         success?: boolean;
         message?: string;
