@@ -4,7 +4,7 @@
     "slug": "tidewater-ombre",
     "category": "mirrors",
     "collectionSlug": "sea-glass-mirrors",
-    "price": 285,
+    "price": 60,
     "currency": "USD",
     "dimensions": "16\" x 20\"",
     "materials": [
@@ -58,7 +58,7 @@
     "slug": "tidewater-reflection",
     "category": "mirrors",
     "collectionSlug": "sea-glass-mirrors",
-    "price": 285,
+    "price": 60,
     "currency": "USD",
     "dimensions": "16\" x 22\"",
     "materials": [
@@ -113,7 +113,7 @@
     "slug": "turquoise-tide-mirror",
     "category": "mirrors",
     "collectionSlug": "sea-glass-mirrors",
-    "price": 245,
+    "price": 55,
     "currency": "USD",
     "dimensions": "16\" x 20\"",
     "materials": [
@@ -169,7 +169,7 @@
     "slug": "tidewater-starfish",
     "category": "mirrors",
     "collectionSlug": "sea-glass-mirrors",
-    "price": 285,
+    "price": 60,
     "currency": "USD",
     "dimensions": "12\" x 16\"",
     "materials": [
@@ -223,7 +223,7 @@
     "slug": "sea-foam-shoreline",
     "category": "mirrors",
     "collectionSlug": "sea-glass-mirrors",
-    "price": 245,
+    "price": 55,
     "currency": "USD",
     "dimensions": "11\" x 14\"",
     "materials": [
@@ -277,7 +277,7 @@
     "slug": "gilded-tide",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 145,
+    "price": 38,
     "currency": "USD",
     "dimensions": "10\" x 10\"",
     "materials": [
@@ -329,7 +329,7 @@
     "slug": "beach-please-mermaid",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 158,
+    "price": 40,
     "currency": "USD",
     "dimensions": "10\" x 12\"",
     "materials": [
@@ -385,7 +385,7 @@
     "slug": "loggerhead-tide",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 165,
+    "price": 42,
     "currency": "USD",
     "dimensions": "7\" x 5\"",
     "materials": [
@@ -438,7 +438,7 @@
     "slug": "garnet-octopus",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 175,
+    "price": 45,
     "currency": "USD",
     "dimensions": "11\" x 14\"",
     "materials": [
@@ -490,7 +490,7 @@
     "slug": "seafoam-loggerhead",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 135,
+    "price": 35,
     "currency": "USD",
     "dimensions": "11\" x 9\"",
     "materials": [
@@ -542,7 +542,7 @@
     "slug": "rose-flamingos",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 155,
+    "price": 40,
     "currency": "USD",
     "dimensions": "10\" x 8\"",
     "materials": [
@@ -591,7 +591,7 @@
     "slug": "aqua-seahorse",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 145,
+    "price": 38,
     "currency": "USD",
     "dimensions": "9\" x 12\"",
     "materials": [
@@ -643,7 +643,7 @@
     "slug": "cocktail-hour",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 128,
+    "price": 32,
     "currency": "USD",
     "dimensions": "9\" x 7\"",
     "materials": [
@@ -693,7 +693,7 @@
     "slug": "sunday-swimsuit-line",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 145,
+    "price": 38,
     "currency": "USD",
     "dimensions": "10\" x 7\"",
     "materials": [
@@ -742,7 +742,7 @@
     "slug": "gulf-coast-palm",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 145,
+    "price": 38,
     "currency": "USD",
     "dimensions": "11\" x 14\"",
     "materials": [
@@ -791,7 +791,7 @@
     "slug": "little-tides",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 128,
+    "price": 32,
     "currency": "USD",
     "dimensions": "10\" x 7\"",
     "materials": [
@@ -841,7 +841,7 @@
     "slug": "salt-air-laundry-day",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 118,
+    "price": 28,
     "currency": "USD",
     "dimensions": "7\" x 5\"",
     "materials": [
@@ -890,7 +890,7 @@
     "slug": "tide-line-garland",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 135,
+    "price": 35,
     "currency": "USD",
     "dimensions": "14\" x 11\"",
     "materials": [
@@ -941,7 +941,7 @@
     "slug": "rose-quartz-tideline",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-shadow-boxes",
-    "price": 128,
+    "price": 32,
     "currency": "USD",
     "dimensions": "11\" x 14\"",
     "materials": [
@@ -990,7 +990,7 @@
     "slug": "seas-the-day",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-sayings",
-    "price": 128,
+    "price": 32,
     "currency": "USD",
     "dimensions": "11\" x 14\"",
     "materials": [
@@ -1046,7 +1046,7 @@
     "slug": "fly-high-free-bird",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-sayings",
-    "price": 118,
+    "price": 28,
     "currency": "USD",
     "dimensions": "10\" x 7\"",
     "materials": [
@@ -1098,7 +1098,7 @@
     "slug": "always-stay-salty",
     "category": "shadow-boxes",
     "collectionSlug": "coastal-sayings",
-    "price": 119,
+    "price": 30,
     "currency": "USD",
     "dimensions": "7\" x 5\"",
     "materials": [
@@ -1150,7 +1150,7 @@
     "slug": "starfish-tide-pine",
     "category": "christmas-trees",
     "collectionSlug": "sea-glass-christmas-trees",
-    "price": 145,
+    "price": 45,
     "currency": "USD",
     "dimensions": "6\" x 12\"",
     "materials": [
@@ -1203,7 +1203,7 @@
     "slug": "starfish-harbor-glow",
     "category": "christmas-trees",
     "collectionSlug": "sea-glass-christmas-trees",
-    "price": 125,
+    "price": 35,
     "currency": "USD",
     "dimensions": "6\" x 12\"",
     "materials": [
@@ -1253,7 +1253,7 @@
     "slug": "cobalt-tide-pine",
     "category": "christmas-trees",
     "collectionSlug": "sea-glass-christmas-trees",
-    "price": 129,
+    "price": 38,
     "currency": "USD",
     "dimensions": "6\" x 14\"",
     "materials": [
@@ -1305,7 +1305,7 @@
     "slug": "moonlit-tide-pine",
     "category": "christmas-trees",
     "collectionSlug": "sea-glass-christmas-trees",
-    "price": 135,
+    "price": 40,
     "currency": "USD",
     "dimensions": "11\" tall x 5\" base",
     "materials": [
@@ -1352,7 +1352,7 @@
     "slug": "salty-sayings-shell-dishes",
     "category": "gifts",
     "collectionSlug": "beach-gifts",
-    "price": 58,
+    "price": 20,
     "currency": "USD",
     "dimensions": "5\" x 4\" each",
     "materials": [
@@ -1404,7 +1404,7 @@
     "slug": "gilded-tide-stars",
     "category": "gifts",
     "collectionSlug": "beach-gifts",
-    "price": 48,
+    "price": 15,
     "currency": "USD",
     "dimensions": "5\" x 5\" each",
     "materials": [

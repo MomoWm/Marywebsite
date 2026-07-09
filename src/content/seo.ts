@@ -11,7 +11,7 @@ export const seoBusiness = {
   "country": "US",
   "latitude": 26.962,
   "longitude": -82.352,
-  "priceRange": "$$-$$$",
+  "priceRange": "$",
   "hours": [
     "Mon-Fri 9:00-17:00",
     "Sat 10:00-16:00",

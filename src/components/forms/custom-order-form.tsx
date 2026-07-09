@@ -29,7 +29,7 @@ const ROOMS = [
   "A gift",
   "Other",
 ];
-const BUDGETS = ["Under $150", "$150 – $300", "$300 – $600", "$600+", "Not sure yet"];
+const BUDGETS = ["$15 – $30", "$30 – $45", "$45 – $60", "$60+", "Not sure yet"];
 const TIMELINES = ["No rush", "Within a month", "1 – 3 months", "I have a specific date"];
 
 export function CustomOrderForm({ reference = "" }: { reference?: string }) {
