@@ -43,6 +43,31 @@ export async function deliverLead(
     }
   }
 
+  // 1b. Web3Forms — free, no dashboard to manage. A single public access key
+  // (WEB3FORMS_ACCESS_KEY) emails every submission straight to Mary's inbox.
+  const web3key = process.env.WEB3FORMS_ACCESS_KEY;
+  if (web3key) {
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: web3key,
+          subject,
+          from_name: "Sea Attitudes website",
+          replyto: typeof data.email === "string" ? data.email : undefined,
+          message: summary,
+        }),
+      });
+      if (res.ok) {
+        const j = (await res.json().catch(() => null)) as { success?: boolean } | null;
+        if (j?.success) return { delivered: true, channel: "web3forms" };
+      }
+    } catch {
+      /* fall through */
+    }
+  }
+
   // 2. Webhook
   const webhook = process.env.LEAD_WEBHOOK_URL;
   if (webhook) {
