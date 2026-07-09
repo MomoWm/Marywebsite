@@ -1,0 +1,355 @@
+# Pages CMS configuration — Mary's no-code editing dashboard.
+# She signs in at https://app.pagescms.org with GitHub and edits everything
+# below through simple forms. Every save publishes the site automatically.
+
+media:
+  input: public
+  output: /
+
+content:
+  - name: products
+    label: My Pieces
+    description: Every artwork on the site — prices, photos, descriptions, and availability.
+    type: file
+    path: src/content/products.json
+    list: true
+    fields:
+      - name: name
+        label: Piece name
+        type: string
+        required: true
+      - name: price
+        label: Starting price (USD)
+        type: number
+      - name: available
+        label: Available (uncheck when a piece is spoken for)
+        type: boolean
+      - name: image
+        label: Photo
+        type: image
+      - name: shortDescription
+        label: Short description (shown on the shop cards)
+        type: text
+      - name: description
+        label: Full description
+        type: text
+      - name: story
+        label: The story behind the piece
+        type: text
+      - name: dimensions
+        label: Size (e.g. 16" x 20")
+        type: string
+      - name: materials
+        label: Materials
+        type: string
+        list: true
+      - name: productType
+        label: Type of piece (shown under the name)
+        type: string
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [mirrors, shadow-boxes, christmas-trees, gifts]
+      - name: collectionSlug
+        label: Collection
+        type: select
+        options:
+          values:
+            - sea-glass-mirrors
+            - coastal-shadow-boxes
+            - coastal-sayings
+            - sea-glass-christmas-trees
+            - beach-gifts
+      - name: featured
+        label: Featured piece
+        type: boolean
+      - name: bestSeller
+        label: Signature piece
+        type: boolean
+      - name: oneOfAKind
+        label: One of a kind
+        type: boolean
+      - name: seasonal
+        label: Seasonal / holiday piece
+        type: boolean
+      - name: homepage
+        label: Show on the homepage
+        type: boolean
+      - name: care
+        label: Care instructions
+        type: text
+      - name: shipping
+        label: Shipping note
+        type: text
+      - name: altText
+        label: Photo description (helps Google and screen readers)
+        type: text
+      - name: seoTitle
+        label: Google search title
+        type: string
+      - name: seoDescription
+        label: Google search description
+        type: text
+      - name: keywords
+        label: Search keywords
+        type: string
+        list: true
+      - name: colorPalette
+        label: Color palette (hex codes — used for artwork accents)
+        type: string
+        list: true
+      - name: orientation
+        label: Photo orientation
+        type: select
+        options:
+          values: [portrait, landscape, square]
+      - name: slug
+        label: Web address name (don't change once shared)
+        type: string
+      - name: currency
+        label: Currency
+        type: string
+
+  - name: siteCopy
+    label: Website Text
+    description: The words across the site — homepage welcome, your story, buttons, and section headings.
+    type: file
+    path: src/content/site-copy.json
+    fields:
+      - name: copy
+        label: Main text
+        type: object
+        fields:
+          - name: announcement
+            label: Announcement bar (very top of every page)
+            type: string
+          - name: homeHero
+            label: Homepage welcome
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small line above the headline
+                type: string
+              - name: headline
+                label: Headline (words between *stars* turn ocean blue)
+                type: string
+              - name: subhead
+                label: Welcome paragraph
+                type: text
+              - name: primaryCta
+                label: Main button text
+                type: string
+              - name: secondaryCta
+                label: Second button text
+                type: string
+          - name: about
+            label: About Mary page
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small line above the title
+                type: string
+              - name: headline
+                label: Page title
+                type: string
+              - name: intro
+                label: Opening paragraph
+                type: text
+              - name: story
+                label: Your story (blank line = new paragraph)
+                type: text
+              - name: pullQuote
+                label: Your quote
+                type: string
+              - name: values
+                label: Three value cards
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                  - name: body
+                    label: Text
+                    type: text
+          - name: brandPillars
+            label: Trust badges (Handmade, One of a Kind, …)
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Icon name (leave as is)
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: whyHandmade
+            label: Why handmade matters
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: body
+                label: Text
+                type: text
+          - name: processSteps
+            label: How each piece comes to life (5 steps)
+            type: object
+            list: true
+            fields:
+              - name: step
+                label: Step number (01, 02, …)
+                type: string
+              - name: title
+                label: Title
+                type: string
+              - name: description
+                label: Description
+                type: text
+          - name: customOrder
+            label: Custom orders page
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small line above the title
+                type: string
+              - name: headline
+                label: Page title
+                type: string
+              - name: subhead
+                label: Subtitle
+                type: text
+              - name: body
+                label: Intro text (blank line = new paragraph)
+                type: text
+              - name: steps
+                label: Commission steps
+                type: object
+                list: true
+                fields:
+                  - name: title
+                    label: Title
+                    type: string
+                  - name: description
+                    label: Description
+                    type: text
+          - name: contact
+            label: Contact page heading
+            type: object
+            fields:
+              - name: eyebrow
+                label: Small line above the title
+                type: string
+              - name: headline
+                label: Page title
+                type: string
+              - name: subhead
+                label: Subtitle
+                type: text
+          - name: newsletter
+            label: Newsletter box
+            type: object
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+              - name: subhead
+                label: Text
+                type: text
+              - name: incentive
+                label: Small note under the box
+                type: string
+          - name: ctaBank
+            label: Big invitation banners (rotating)
+            type: object
+            list: true
+            fields:
+              - name: headline
+                label: Headline
+                type: string
+              - name: subhead
+                label: Text
+                type: text
+              - name: button
+                label: Button text
+                type: string
+      - name: sectionIntros
+        label: Section headings
+        type: object
+        fields:
+          - name: featured
+            label: Featured pieces section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: meetMary
+            label: Meet Mary section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: whyHandmade
+            label: Why handmade section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: process
+            label: Process section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: bestSellers
+            label: Favorites section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: customCta
+            label: Commission invitation
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: testimonials
+            label: Testimonials section (unused)
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: instagram
+            label: Instagram section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: newsletter
+            label: Newsletter section
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
+          - name: contactCta
+            label: Contact invitation
+            type: object
+            fields:
+              - { name: eyebrow, label: Small line, type: string }
+              - { name: title, label: Heading, type: string }
+              - { name: subhead, label: Subtitle, type: text }
