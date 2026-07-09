@@ -1,62 +1,18 @@
 {
-  "sectionIntros": {
-    "featured": {
-      "eyebrow": "Newly Composed",
-      "title": "Featured Pieces from the Studio",
-      "subhead": "A rotating selection of recent work, each one finished by hand and ready to find its home."
-    },
-    "meetMary": {
-      "eyebrow": "The Artist",
-      "title": "Meet Mary Lee",
-      "subhead": "The hands, the eye, and the Gulf Coast that shapes every piece that leaves the studio."
-    },
-    "whyHandmade": {
-      "eyebrow": "Why It Matters",
-      "title": "The Beauty of Handmade",
-      "subhead": "What you gain when art is made slowly, by one artist, one piece at a time."
-    },
-    "process": {
-      "eyebrow": "From Shore to Studio",
-      "title": "How Each Piece Comes to Life",
-      "subhead": "A look at the quiet, deliberate process behind every Sea Attitudes original."
-    },
-    "bestSellers": {
-      "eyebrow": "Most Loved",
-      "title": "Collected Favorites",
-      "subhead": "The pieces our collectors return to again and again — coastal classics with staying power."
-    },
-    "customCta": {
-      "eyebrow": "Made for You",
-      "title": "Commission a Piece of Your Own",
-      "subhead": "Have a color, a space, or a memory in mind? Mary will create something made entirely around it."
-    },
-    "testimonials": {
-      "eyebrow": "In Their Words",
-      "title": "From Our Collectors",
-      "subhead": "Stories from the homes, getaways, and gifts our artwork now calls home."
-    },
-    "instagram": {
-      "eyebrow": "Follow Along",
-      "title": "From the Studio to Your Feed",
-      "subhead": "Behind-the-scenes glimpses, new work, and the Gulf Coast that inspires it all."
-    },
-    "newsletter": {
-      "eyebrow": "Stay in Touch",
-      "title": "Join the Sea Attitudes Letter",
-      "subhead": "First looks at new pieces, studio stories, and quiet inspiration from the coast."
-    },
-    "contactCta": {
-      "eyebrow": "Let's Talk",
-      "title": "We'd Love to Hear From You",
-      "subhead": "Questions about a piece, a commission, or shipping? Reach out and Mary will personally reply."
-    }
-  },
   "copy": {
+    "announcement": "Handmade in Englewood, FL · Ships nationwide",
+    "homeHero": {
+      "eyebrow": "One-of-a-Kind Coastal Art",
+      "headline": "Handcrafted Art, *Shaped by the Sea*",
+      "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, crushed glass, and shells, inspired by Florida's Gulf Coast — each piece carrying its own story.",
+      "primaryCta": "Request a Custom Piece",
+      "secondaryCta": "Explore the Collection"
+    },
     "about": {
       "eyebrow": "The Artist Behind the Tide",
       "headline": "Mary Lee, and a Life Spent by the Water",
-      "intro": "Sea Attitudes began the way the best things often do — quietly, in Englewood, Florida, out of a lifelong love of the Gulf Coast and a fascination with genuine sea glass. Mary Lee shapes sea glass, crushed glass, and shells into one-of-a-kind art meant to be lived with.",
-      "story": "Mary has always belonged to the water. She grew up reading tides the way other people read books, learning that the most beautiful things are rarely perfect — they're shaped, softened, and made singular by time. Genuine sea glass carries that same quiet history: each frosted piece has been tumbled smooth over years, and no two are ever the same.\n\nWhat began as a fascination with these small treasures became a calling. Mary couldn't stop composing with them — arranging color, texture, and light into pieces that hold the feeling of the coast long after you've left the sand.\n\nToday, every work that leaves her studio is made entirely by hand, one at a time. There is no factory, no assembly line, no two pieces alike. Mary chooses each material herself, lets the natural shapes guide the design, and finishes each piece as though it were going into her own home — because, in a sense, it always is.\n\nSea Attitudes is a small business in the truest sense: a single artist, a stretch of Gulf coastline, and a belief that the most meaningful decor is the kind made slowly, with intention, and inspired by something real.",
+      "intro": "Sea Attitudes began the way the best things often do — quietly, in Englewood, Florida, out of a lifelong love of the Gulf Coast and a fascination with sea glass, uniquely original seashells,  and other coastal finds. Mary Lee shapes sea glass, crushed glass, and shells into one-of-a-kind art meant to be lived with.",
+      "story": "Mary has always felt connected to the sea, believing the most beautiful things are rarely perfect — they're shaped, softened, and made singular by time. Sea glass carries that same quiet history: each frosted piece has been tumbled smooth over years, and no two are ever the same.\n\nWhat began as a fascination with these small treasures became a calling - arranging color, texture, and light into pieces that hold the feeling of the coast long after you've left the sand.\n\nToday, every work that leaves her studio is made entirely by hand, one at a time. There is no factory, no assembly line, no two pieces alike. Mary chooses each material herself, lets the natural shapes guide the design, and finishes each piece as though it were going into her own home — because, in a sense, it always is.\n\nSea Attitudes is a small business in the truest sense: a single artist, a stretch of Gulf coastline, and a belief that the most meaningful decor is the kind made slowly, with intention, and inspired by something real.",
       "pullQuote": "The ocean does the first half of the work. I just listen to what each piece wants to become.",
       "values": [
         {
@@ -72,14 +28,6 @@
           "body": "These aren't fragile keepsakes meant to be hidden away — they're heirloom-quality pieces designed to bring the calm of the coast into everyday life."
         }
       ]
-    },
-    "announcement": "Handmade in Englewood, FL · Ships nationwide",
-    "homeHero": {
-      "eyebrow": "One-of-a-Kind Coastal Art",
-      "headline": "Handcrafted Art, *Shaped by the Sea*",
-      "subhead": "One-of-a-kind coastal artwork crafted from genuine sea glass, crushed glass, and shells, inspired by Florida's Gulf Coast — each piece carrying its own story.",
-      "primaryCta": "Request a Custom Piece",
-      "secondaryCta": "Explore the Collection"
     },
     "brandPillars": [
       {
@@ -224,5 +172,57 @@
         "button": "Get in Touch"
       }
     ]
+  },
+  "sectionIntros": {
+    "featured": {
+      "eyebrow": "Newly Composed",
+      "title": "Featured Pieces from the Studio",
+      "subhead": "A rotating selection of recent work, each one finished by hand and ready to find its home."
+    },
+    "meetMary": {
+      "eyebrow": "The Artist",
+      "title": "Meet Mary Lee",
+      "subhead": "The hands, the eye, and the Gulf Coast that shapes every piece that leaves the studio."
+    },
+    "whyHandmade": {
+      "eyebrow": "Why It Matters",
+      "title": "The Beauty of Handmade",
+      "subhead": "What you gain when art is made slowly, by one artist, one piece at a time."
+    },
+    "process": {
+      "eyebrow": "From Shore to Studio",
+      "title": "How Each Piece Comes to Life",
+      "subhead": "A look at the quiet, deliberate process behind every Sea Attitudes original."
+    },
+    "bestSellers": {
+      "eyebrow": "Most Loved",
+      "title": "Collected Favorites",
+      "subhead": "The pieces our collectors return to again and again — coastal classics with staying power."
+    },
+    "customCta": {
+      "eyebrow": "Made for You",
+      "title": "Commission a Piece of Your Own",
+      "subhead": "Have a color, a space, or a memory in mind? Mary will create something made entirely around it."
+    },
+    "testimonials": {
+      "eyebrow": "In Their Words",
+      "title": "From Our Collectors",
+      "subhead": "Stories from the homes, getaways, and gifts our artwork now calls home."
+    },
+    "instagram": {
+      "eyebrow": "Follow Along",
+      "title": "From the Studio to Your Feed",
+      "subhead": "Behind-the-scenes glimpses, new work, and the Gulf Coast that inspires it all."
+    },
+    "newsletter": {
+      "eyebrow": "Stay in Touch",
+      "title": "Join the Sea Attitudes Letter",
+      "subhead": "First looks at new pieces, studio stories, and quiet inspiration from the coast."
+    },
+    "contactCta": {
+      "eyebrow": "Let's Talk",
+      "title": "We'd Love to Hear From You",
+      "subhead": "Questions about a piece, a commission, or shipping? Reach out and Mary will personally reply."
+    }
   }
 }
