@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { leadMailto } from "@/lib/mailto";
 
 const WEB3FORMS_KEY = "95860b0f-813b-4f36-865e-fb0189f8c138";
-const IMGBB_KEY = "c630c9acfcbde616ecc117c98e69a72c";
 
 const PROJECT_TYPES = [
   "Sea Glass Mirror",
@@ -42,11 +41,33 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
   const [files, setFiles] = React.useState<File[]>([]);
 
   function onFiles(e: React.ChangeEvent<HTMLInputElement>) {
-    // Keep real images under ~5MB so they attach reliably to the email.
+    // Accept large phone photos too — they're resized before upload.
     const chosen = Array.from(e.target.files ?? []).filter(
-      (f) => f.type.startsWith("image/") && f.size <= 5 * 1024 * 1024,
+      (f) => f.type.startsWith("image/") && f.size <= 25 * 1024 * 1024,
     );
     setFiles((prev) => [...prev, ...chosen].slice(0, 4));
+  }
+
+  /** Shrink a photo in the browser (max 1600px JPEG) so uploads are small and fast. */
+  async function shrink(file: File): Promise<Blob> {
+    try {
+      const bitmap = await createImageBitmap(file);
+      const scale = Math.min(1, 1600 / Math.max(bitmap.width, bitmap.height));
+      const w = Math.max(1, Math.round(bitmap.width * scale));
+      const h = Math.max(1, Math.round(bitmap.height * scale));
+      const canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return file;
+      ctx.drawImage(bitmap, 0, 0, w, h);
+      const blob = await new Promise<Blob | null>((resolve) =>
+        canvas.toBlob(resolve, "image/jpeg", 0.82),
+      );
+      return blob && blob.size < file.size ? blob : file;
+    } catch {
+      return file;
+    }
   }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -62,23 +83,34 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
     delete mailData.company;
     setMailto(leadMailto(`New custom commission from ${raw.name || "the website"}`, mailData));
 
-    // 1. Host the inspiration photos on ImgBB (free) so they become viewable
-    //    links inside the email. Failures are skipped so the request still sends.
-    const photoLinks: string[] = [];
-    for (const file of files.slice(0, 4)) {
+    // 1. Shrink the photos in the browser, then host them through our own
+    //    server (/api/photos), which can't be blocked by browser rules.
+    //    Failures never stop the request — they're reported in the email.
+    let photoLinks: string[] = [];
+    let photoErrors: string[] = [];
+    if (files.length) {
       try {
-        const img = new FormData();
-        img.append("image", file);
-        const up = await fetch(`https://api.imgbb.com/1/upload?key=${IMGBB_KEY}`, {
-          method: "POST",
-          body: img,
-        });
-        const uj = (await up.json().catch(() => null)) as { data?: { url?: string } } | null;
-        if (uj?.data?.url) photoLinks.push(uj.data.url);
+        const up = new FormData();
+        for (const file of files.slice(0, 4)) {
+          const small = await shrink(file);
+          up.append("photos", small, file.name.replace(/\.\w+$/, "") + ".jpg");
+        }
+        const res = await fetch("/api/photos", { method: "POST", body: up });
+        const j = (await res.json().catch(() => null)) as {
+          urls?: string[];
+          errors?: string[];
+        } | null;
+        photoLinks = j?.urls ?? [];
+        photoErrors = j?.errors ?? [];
       } catch {
-        /* skip this photo, keep the request going */
+        photoErrors = ["photo upload failed before reaching the server"];
       }
     }
+    const photoReport = photoLinks.length
+      ? photoLinks.join("\n")
+      : files.length
+        ? `Customer attached ${files.length} photo(s) but hosting failed (${photoErrors.join("; ") || "unknown"}) — reply and ask them to email the photos.`
+        : "None attached";
 
     // 2. Send the request via Web3Forms, with photo links Mary can tap to view.
     try {
@@ -100,7 +132,7 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
           Budget: raw.budget || "—",
           Timeline: raw.timeline || "—",
           Vision: raw.message,
-          "Inspiration photos": photoLinks.length ? photoLinks.join("\n") : "None attached",
+          "Inspiration photos": photoReport,
         }),
       });
       const json = (await res.json().catch(() => ({}))) as {
