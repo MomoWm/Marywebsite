@@ -38,46 +38,50 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
   >("idle");
   const [mailto, setMailto] = React.useState("");
   const [err, setErr] = React.useState("");
-  const [files, setFiles] = React.useState<string[]>([]);
+  const [files, setFiles] = React.useState<File[]>([]);
 
   function onFiles(e: React.ChangeEvent<HTMLInputElement>) {
-    const names = Array.from(e.target.files ?? []).map((f) => f.name);
-    setFiles((prev) => Array.from(new Set([...prev, ...names])).slice(0, 6));
+    // Keep real images under ~5MB so they attach reliably to the email.
+    const chosen = Array.from(e.target.files ?? []).filter(
+      (f) => f.type.startsWith("image/") && f.size <= 5 * 1024 * 1024,
+    );
+    setFiles((prev) => [...prev, ...chosen].slice(0, 4));
   }
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("loading");
-    const form = new FormData(e.currentTarget);
-    const payload = {
-      ...Object.fromEntries(form.entries()),
-      attachments: files,
-    } as Record<string, string | string[]>;
-    delete payload.inspiration;
-    if (payload.company) return setState("done"); // honeypot
-    setMailto(leadMailto(`New custom commission from ${payload.name || "the website"}`, payload));
+    const raw = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<
+      string,
+      string
+    >;
+    if (raw.company) return setState("done"); // honeypot
+    const mailData: Record<string, unknown> = { ...raw, attachments: files.map((f) => f.name) };
+    delete mailData.inspiration;
+    delete mailData.company;
+    setMailto(leadMailto(`New custom commission from ${raw.name || "the website"}`, mailData));
+
+    // Send as multipart so the actual inspiration photos attach to the email.
+    const fd = new FormData();
+    fd.append("access_key", WEB3FORMS_KEY);
+    fd.append("subject", `New custom commission from ${raw.name || "the website"}`);
+    fd.append("from_name", "Sea Attitudes website");
+    fd.append("replyto", raw.email || "");
+    fd.append("Name", raw.name || "");
+    fd.append("Email", raw.email || "");
+    fd.append("Phone", raw.phone || "—");
+    fd.append("Piece", raw.projectType || "—");
+    fd.append("Room", raw.room || "—");
+    fd.append("Size", raw.dimensions || "—");
+    fd.append("Colors", raw.colors || "—");
+    fd.append("Budget", raw.budget || "—");
+    fd.append("Timeline", raw.timeline || "—");
+    fd.append("Vision", raw.message || "");
+    files.slice(0, 4).forEach((file, i) => fd.append(`Inspiration photo ${i + 1}`, file, file.name));
+
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `New custom commission from ${payload.name || "the website"}`,
-          from_name: "Sea Attitudes website",
-          replyto: payload.email,
-          Name: payload.name,
-          Email: payload.email,
-          Phone: payload.phone || "—",
-          Piece: payload.projectType || "—",
-          Room: payload.room || "—",
-          Size: payload.dimensions || "—",
-          Colors: payload.colors || "—",
-          Budget: payload.budget || "—",
-          Timeline: payload.timeline || "—",
-          Vision: payload.message,
-          Photos: Array.isArray(payload.attachments) ? payload.attachments.join(", ") || "—" : "—",
-        }),
-      });
+      // No Content-Type header — the browser sets the multipart boundary.
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
       const json = (await res.json().catch(() => ({}))) as {
         success?: boolean;
         message?: string;
@@ -239,16 +243,16 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
           </label>
           {files.length > 0 && (
             <ul className="mt-3 flex flex-wrap gap-2">
-              {files.map((f) => (
+              {files.map((f, i) => (
                 <li
-                  key={f}
+                  key={`${f.name}-${i}`}
                   className="flex items-center gap-1.5 rounded-full bg-seafoam/20 px-3 py-1 text-xs text-deepsea"
                 >
-                  {f}
+                  {f.name}
                   <button
                     type="button"
-                    onClick={() => setFiles((prev) => prev.filter((x) => x !== f))}
-                    aria-label={`Remove ${f}`}
+                    onClick={() => setFiles((prev) => prev.filter((_, idx) => idx !== i))}
+                    aria-label={`Remove ${f.name}`}
                   >
                     <X className="size-3" />
                   </button>
@@ -257,8 +261,8 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
             </ul>
           )}
           <p className="mt-2 text-xs text-muted">
-            Selected here for reference — Mary will reply by email to collect full-size
-            photos.
+            Up to 4 photos (images under 5MB) attach right to your request, so Mary can see
+            exactly what you have in mind.
           </p>
         </FieldGroup>
       </fieldset>
