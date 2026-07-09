@@ -6,6 +6,8 @@ import { Label, Input, Textarea, Select, FieldGroup } from "@/components/ui/fiel
 import { Button } from "@/components/ui/button";
 import { leadMailto } from "@/lib/mailto";
 
+const WEB3FORMS_KEY = "95860b0f-813b-4f36-865e-fb0189f8c138";
+
 const PROJECT_TYPES = [
   "Sea Glass Mirror",
   "Coastal Shadow Box",
@@ -35,6 +37,7 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
     "idle" | "loading" | "done" | "manual" | "error"
   >("idle");
   const [mailto, setMailto] = React.useState("");
+  const [err, setErr] = React.useState("");
   const [files, setFiles] = React.useState<string[]>([]);
 
   function onFiles(e: React.ChangeEvent<HTMLInputElement>) {
@@ -49,27 +52,43 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
     const payload = {
       ...Object.fromEntries(form.entries()),
       attachments: files,
-    };
-    const data = payload as Record<string, unknown>;
-    delete data.inspiration;
-    const link = leadMailto(
-      `New custom commission from ${data.name || "the website"}`,
-      data,
-    );
+    } as Record<string, string | string[]>;
+    delete payload.inspiration;
+    if (payload.company) return setState("done"); // honeypot
+    setMailto(leadMailto(`New custom commission from ${payload.name || "the website"}`, payload));
     try {
-      const res = await fetch("/api/custom-order", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New custom commission from ${payload.name || "the website"}`,
+          from_name: "Sea Attitudes website",
+          replyto: payload.email,
+          Name: payload.name,
+          Email: payload.email,
+          Phone: payload.phone || "—",
+          Piece: payload.projectType || "—",
+          Room: payload.room || "—",
+          Size: payload.dimensions || "—",
+          Colors: payload.colors || "—",
+          Budget: payload.budget || "—",
+          Timeline: payload.timeline || "—",
+          Vision: payload.message,
+          Photos: Array.isArray(payload.attachments) ? payload.attachments.join(", ") || "—" : "—",
+        }),
       });
-      const json = (await res.json().catch(() => ({}))) as { delivered?: boolean };
-      if (res.ok && json.delivered) setState("done");
-      else if (res.ok) {
-        setMailto(link);
+      const json = (await res.json().catch(() => ({}))) as {
+        success?: boolean;
+        message?: string;
+      };
+      if (json.success) setState("done");
+      else {
+        setErr(json.message || "The message service didn't confirm delivery.");
         setState("manual");
-      } else setState("error");
+      }
     } catch {
-      setMailto(link);
+      setErr("Couldn't reach the message service.");
       setState("manual");
     }
   }
@@ -116,6 +135,9 @@ export function CustomOrderForm({ reference = "" }: { reference?: string }) {
           </a>
           .
         </p>
+        {err && (
+          <p className="mx-auto mt-4 max-w-md text-xs text-muted/80">Details: {err}</p>
+        )}
       </div>
     );
   }

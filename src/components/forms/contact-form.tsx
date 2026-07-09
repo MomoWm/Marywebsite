@@ -6,36 +6,54 @@ import { Label, Input, Textarea, FieldGroup } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { leadMailto } from "@/lib/mailto";
 
+const WEB3FORMS_KEY = "95860b0f-813b-4f36-865e-fb0189f8c138";
+
 export function ContactForm({ defaultSubject = "" }: { defaultSubject?: string }) {
   const [state, setState] = React.useState<
     "idle" | "loading" | "done" | "manual" | "error"
   >("idle");
   const [mailto, setMailto] = React.useState("");
+  const [err, setErr] = React.useState("");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setState("loading");
     const form = new FormData(e.currentTarget);
     const payload = Object.fromEntries(form.entries()) as Record<string, string>;
-    const link = leadMailto(
-      `New message from ${payload.name || "the website"}${payload.subject ? ` — ${payload.subject}` : ""}`,
-      payload,
+    if (payload.company) return setState("done"); // honeypot: bots see "done"
+    setMailto(
+      leadMailto(
+        `New message from ${payload.name || "the website"}${payload.subject ? ` — ${payload.subject}` : ""}`,
+        payload,
+      ),
     );
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New message from ${payload.name || "the website"}`,
+          from_name: "Sea Attitudes website",
+          replyto: payload.email,
+          Name: payload.name,
+          Email: payload.email,
+          Phone: payload.phone || "—",
+          "About": payload.subject || "—",
+          Message: payload.message,
+        }),
       });
-      const json = (await res.json().catch(() => ({}))) as { delivered?: boolean };
-      if (res.ok && json.delivered) setState("done");
-      else if (res.ok) {
-        setMailto(link);
+      const json = (await res.json().catch(() => ({}))) as {
+        success?: boolean;
+        message?: string;
+      };
+      if (json.success) setState("done");
+      else {
+        setErr(json.message || "The message service didn't confirm delivery.");
         setState("manual");
-      } else setState("error");
+      }
     } catch {
-      // Network hiccup — still give them a guaranteed way through.
-      setMailto(link);
+      setErr("Couldn't reach the message service.");
       setState("manual");
     }
   }
@@ -79,6 +97,9 @@ export function ContactForm({ defaultSubject = "" }: { defaultSubject?: string }
           </a>
           .
         </p>
+        {err && (
+          <p className="mx-auto mt-4 max-w-sm text-xs text-muted/80">Details: {err}</p>
+        )}
       </div>
     );
   }
